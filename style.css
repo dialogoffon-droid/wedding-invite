@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  background: #faf7f4;
+  font-family: "Georgia", serif;
+  color: #3a3a3a;
+}
+
+h1, h2 {
+  font-family: "Caveat", cursive;
+  text-align: center;
+  color: #2d2d2d;
+}
+
+.hero {
+  text-align: center;
+  background: #fdfcfb;
+  padding: 60px 20px;
+}
+
+.hero-inner h1 {
+  font-size: 4rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.hero-inner p {
+  font-size: 1.3rem;
+  color: #a33;
+}
+
+.schedule {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.timeline {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.event {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.event img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.invite {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.invite .heart {
+  width: 40px;
+  margin: 0 auto 10px;
+}
+
+.venue {
+  text-align: center;
+  background: #fff;
+  padding: 50px 20px;
+  border-radius: 30px;
+  margin: 40px auto;
+  max-width: 600px;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.venue .angel {
+  position: absolute;
+  top: -40px;
+  right: -20px;
+  width: 80px;
+}
+
+.venue button {
+  background: #3a3a3a;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.rsvp {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.rsvp-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rsvp-form input, .rsvp-form select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.rsvp-form button {
+  background: #a33;
+  color: white;
+  padding: 14px;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.rsvp-form button:hover {
+  opacity: 0.8;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+footer img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+/* 📱 Мобильная адаптация */
+@media (max-width: 768px) {
+  .timeline {
+    flex-direction: column;
+  }
+
+  .venue {
+    margin: 20px;
+  }
+
+  .venue .angel {
+    width: 60px;
+    right: 0;
+    top: -30px;
+  }
+}
