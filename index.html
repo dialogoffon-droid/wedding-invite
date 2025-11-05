@@ -2,97 +2,90 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Свадебное приглашение</title>
+  <title>Valeriy & Alexandra — Wedding Invitation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <div class="page-background"></div>
 
-  <!-- Блок 1 — Главный титульник -->
+  <!-- Блок 1 — Приветствие -->
   <section class="invite-block">
-    <img src="image/top-angel.png" class="decor-top" alt="">
-    <div class="text-content">
-      <h1>Валера & Александра</h1>
-      <p class="subtitle">приглашают вас на нашу свадьбу</p>
-      <p class="date">25 июля 2026 года</p>
-    </div>
-    <img src="image/bottom-flowers.png" class="decor-bottom" alt="">
+    <img src="image/angel-left.png" class="decor-left" alt="">
+    <img src="image/angel-right.png" class="decor-right" alt="">
+    <h1>Валерий & Александра</h1>
+    <p class="subtitle">приглашают вас на нашу свадьбу</p>
+    <p class="date">15 августа 2025</p>
+    <img src="image/heart-center.png" class="decor-top" alt="">
   </section>
 
-  <!-- Блок 2 — О событии -->
+  <!-- Блок 2 — Дорогие друзья -->
   <section class="invite-block">
-    <img src="image/left-branch.png" class="decor-left" alt="">
-    <div class="text-content">
-      <h2>Дорогие друзья!</h2>
-      <p>
-        Мы рады пригласить вас разделить с нами этот особенный день, 
-        когда наши сердца соединяются в одну историю.
-      </p>
-    </div>
-    <img src="image/right-branch.png" class="decor-right" alt="">
+    <h2>Дорогие друзья!</h2>
+    <p>
+      Мы рады пригласить вас разделить с нами этот особенный день, 
+      когда наши сердца соединяются в одну историю.
+    </p>
+    <img src="image/floral-line-top.png" class="decor-top" alt="">
+    <img src="image/floral-line-bottom.png" class="decor-bottom" alt="">
   </section>
 
   <!-- Блок 3 — Место проведения -->
   <section class="invite-block">
-    <img src="image/top-frame.png" class="decor-top" alt="">
-    <div class="text-content">
-      <h2>Место церемонии</h2>
-      <p>Загородный дом "Речное утро"</p>
-      <a href="#" class="map-button">Посмотреть на карте</a>
-    </div>
-    <img src="image/bottom-frame.png" class="decor-bottom" alt="">
+    <h2>Место церемонии</h2>
+    <p>Зал торжеств "Ривьера", Москва</p>
+    <a href="#" class="map-button">Посмотреть на карте</a>
+    <img src="image/corner-left.png" class="decor-left" alt="">
+    <img src="image/corner-right.png" class="decor-right" alt="">
   </section>
 
   <!-- Блок 4 — Программа -->
   <section class="invite-block">
-    <img src="image/flowers-left.png" class="decor-left" alt="">
-    <div class="text-content">
-      <h2>Программа дня</h2>
-      <ul>
-        <li>15:00 — Сбор гостей</li>
-        <li>16:00 — Церемония</li>
-        <li>17:30 — Ужин и танцы</li>
-        <li>23:00 — Завершение вечера</li>
-      </ul>
-    </div>
-    <img src="image/flowers-right.png" class="decor-right" alt="">
+    <h2>Программа дня</h2>
+    <ul>
+      <li>15:00 — Сбор гостей</li>
+      <li>16:00 — Церемония</li>
+      <li>17:30 — Ужин и танцы</li>
+      <li>23:00 — Завершение вечера</li>
+    </ul>
+    <img src="image/rings.png" class="decor-bottom" alt="">
   </section>
 
-  <!-- Блок 5 — Форма RSVP -->
+  <!-- Блок 5 — RSVP -->
   <section class="invite-block">
-    <img src="image/angel-small.png" class="decor-top" alt="">
-    <div class="text-content">
-      <h2>Ваш ответ (RSVP)</h2>
-      <form id="rsvpForm">
-        <input type="text" id="guest_name" placeholder="Имя" required><br>
-        <input type="text" id="guest_surname" placeholder="Фамилия" required><br>
-        <select id="coming" required>
-          <option value="">Вы придёте?</option>
-          <option value="Да">Да</option>
-          <option value="Нет">Нет</option>
-        </select><br>
-        <input type="text" id="coming_alone" placeholder="Придёте один?" ><br>
-        <input type="text" id="guests_names" placeholder="Имена гостей"><br>
-        <input type="number" id="guests_count" placeholder="Количество гостей"><br>
-        <button type="submit">Отправить</button>
-      </form>
-      <p id="response"></p>
-    </div>
+    <h2>RSVP</h2>
+    <form id="rsvpForm" class="rsvp-form">
+      <input type="text" id="guest_name" name="guest_name" placeholder="Ваше имя" required>
+      <input type="text" id="guest_surname" name="guest_surname" placeholder="Ваша фамилия" required>
+      
+      <select id="coming" name="coming" required>
+        <option value="">Вы придёте?</option>
+        <option value="yes">Да</option>
+        <option value="no">Нет</option>
+      </select>
+      
+      <select id="coming_alone" name="coming_alone">
+        <option value="">Придёте один?</option>
+        <option value="yes">Да</option>
+        <option value="no">Нет</option>
+      </select>
+      
+      <input type="text" id="guests_names" name="guests_names" placeholder="Имена сопровождающих (если есть)">
+      <input type="number" id="guests_count" name="guests_count" placeholder="Количество гостей">
+
+      <button type="submit">Отправить RSVP</button>
+      <div id="response"></div>
+    </form>
   </section>
 
-  <!-- Блок 6 — Контакты -->
-  <section class="invite-block">
-    <img src="image/bottom-flowers.png" class="decor-bottom" alt="">
-    <div class="text-content">
-      <h2>Контакты</h2>
-      <p>По вопросам организации: <br> +7 (999) 123-45-67</p>
-      <p>Мы с нетерпением ждем встречи с вами!</p>
-    </div>
-  </section>
+  <!-- Footer -->
+  <footer class="invite-block">
+    <img src="image/champagne-set.png" alt="" class="decor-left">
+    <img src="image/cake.png" alt="" class="decor-right">
+    <p>С любовью, Валерий и Александра ❤️</p>
+  </footer>
 
   <script src="script.js"></script>
-
 </body>
 </html>
