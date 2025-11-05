@@ -12,18 +12,18 @@
 
   <!-- Блок 1 — Главный титульник -->
   <section class="invite-block">
-    <img src="decor/top-angel.png" class="decor-top" alt="">
+    <img src="images/top-angel.png" class="decor-top" alt="">
     <div class="text-content">
       <h1>Валера & Александра</h1>
       <p class="subtitle">приглашают вас на нашу свадьбу</p>
       <p class="date">25 июля 2026 года</p>
     </div>
-    <img src="decor/bottom-flowers.png" class="decor-bottom" alt="">
+    <img src="images/bottom-flowers.png" class="decor-bottom" alt="">
   </section>
 
   <!-- Блок 2 — О событии -->
   <section class="invite-block">
-    <img src="decor/left-branch.png" class="decor-left" alt="">
+    <img src="images/left-branch.png" class="decor-left" alt="">
     <div class="text-content">
       <h2>Дорогие друзья!</h2>
       <p>
@@ -31,23 +31,23 @@
         когда наши сердца соединяются в одну историю.
       </p>
     </div>
-    <img src="decor/right-branch.png" class="decor-right" alt="">
+    <img src="images/right-branch.png" class="decor-right" alt="">
   </section>
 
   <!-- Блок 3 — Место проведения -->
   <section class="invite-block">
-    <img src="decor/top-frame.png" class="decor-top" alt="">
+    <img src="images/top-frame.png" class="decor-top" alt="">
     <div class="text-content">
       <h2>Место церемонии</h2>
       <p>Загородный дом "Речное утро"</p>
       <a href="#" class="map-button">Посмотреть на карте</a>
     </div>
-    <img src="decor/bottom-frame.png" class="decor-bottom" alt="">
+    <img src="images/bottom-frame.png" class="decor-bottom" alt="">
   </section>
 
   <!-- Блок 4 — Программа -->
   <section class="invite-block">
-    <img src="decor/flowers-left.png" class="decor-left" alt="">
+    <img src="images/flowers-left.png" class="decor-left" alt="">
     <div class="text-content">
       <h2>Программа дня</h2>
       <ul>
@@ -57,31 +57,42 @@
         <li>23:00 — Завершение вечера</li>
       </ul>
     </div>
-    <img src="decor/flowers-right.png" class="decor-right" alt="">
+    <img src="images/flowers-right.png" class="decor-right" alt="">
   </section>
 
-  <!-- Блок 5 — Пожелания -->
+  <!-- Блок 5 — Форма RSVP -->
   <section class="invite-block">
-    <img src="decor/angel-small.png" class="decor-top" alt="">
+    <img src="images/angel-small.png" class="decor-top" alt="">
     <div class="text-content">
-      <h2>Пожелания к подаркам</h2>
-      <p>
-        Ваши улыбки — лучший подарок!  
-        Но если вы хотите порадовать нас — 
-        конверт с теплыми словами будет прекрасным выбором ❤️
-      </p>
+      <h2>Ваш ответ (RSVP)</h2>
+      <form id="rsvpForm">
+        <input type="text" id="guest_name" placeholder="Имя" required><br>
+        <input type="text" id="guest_surname" placeholder="Фамилия" required><br>
+        <select id="coming" required>
+          <option value="">Вы придёте?</option>
+          <option value="Да">Да</option>
+          <option value="Нет">Нет</option>
+        </select><br>
+        <input type="text" id="coming_alone" placeholder="Придёте один?" ><br>
+        <input type="text" id="guests_names" placeholder="Имена гостей"><br>
+        <input type="number" id="guests_count" placeholder="Количество гостей"><br>
+        <button type="submit">Отправить</button>
+      </form>
+      <p id="response"></p>
     </div>
   </section>
 
   <!-- Блок 6 — Контакты -->
   <section class="invite-block">
-    <img src="decor/bottom-flowers.png" class="decor-bottom" alt="">
+    <img src="images/bottom-flowers.png" class="decor-bottom" alt="">
     <div class="text-content">
       <h2>Контакты</h2>
       <p>По вопросам организации: <br> +7 (999) 123-45-67</p>
       <p>Мы с нетерпением ждем встречи с вами!</p>
     </div>
   </section>
+
+  <script src="script/rsvp.js"></script>
 
 </body>
 </html>
