@@ -1,144 +1,137 @@
 body {
   margin: 0;
   font-family: "Georgia", serif;
-  background: #fff;
-  color: #333;
+  background: #fffdf8;
+  color: #3b2f2f;
   text-align: center;
 }
 
-.section {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-.section h2 {
-  margin-top: 0;
-  font-size: 32px;
-  margin-bottom: 25px;
-}
-
+/* Герой-секция */
 .hero {
-  background: #f4f4f4;
-  padding: 100px 20px 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  position: relative;
+  padding: 100px 20px;
+  background: #f8f5f0;
 }
 
-.hero-text h1 {
+.hero h1 {
   font-size: 48px;
   margin: 0;
 }
 
-.hero-text p {
+.hero .date {
   font-size: 20px;
-  margin: 5px 0 0 0;
+  margin: 10px 0;
 }
 
+/* Декор */
+.angel {
+  position: absolute;
+  width: 120px;
+  opacity: 0.9;
+}
+
+.angel-left {
+  top: 50px;
+  left: 5%;
+}
+
+.angel-right {
+  top: 50px;
+  right: 5%;
+}
+
+.decor-top,
+.decor-bottom {
+  width: 250px;
+  opacity: 0.8;
+}
+
+.heart-center {
+  width: 80px;
+  margin-top: 30px;
+}
+
+/* Subhero */
 .subhero {
-  background: #e9e4dd;
-  padding: 80px 20px;
+  background: #efe9e1;
+  padding: 60px 20px;
 }
 
 .subhero h3 {
-  font-size: 26px;
-  margin-top: 10px;
+  margin: 0 0 20px 0;
+  font-size: 24px;
+}
+
+.rings {
+  width: 80px;
+  opacity: 0.9;
+}
+
+/* RSVP форма */
+.section {
+  padding: 60px 20px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .rsvp-form {
-  max-width: 500px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-top: 20px;
 }
 
 .rsvp-form input,
 .rsvp-form select {
   padding: 10px;
-  font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 6px;
+  font-size: 16px;
 }
 
 .rsvp-form button {
   padding: 14px;
   font-size: 18px;
-  background: black;
-  color: white;
+  background: #3b2f2f;
+  color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .rsvp-form button:hover {
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
-#response {
-  text-align: center;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
+/* Footer */
 footer {
-  text-align: center;
-  padding: 30px;
-  font-size: 14px;
-  color: #777;
+  background: #f4f0ea;
+  padding: 40px 20px;
 }
 
-/* === Decorative elements === */
-.decor-top, .decor-bottom {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.floral-top, .floral-bottom {
-  width: 90%;
-  max-width: 800px;
-  opacity: 0.7;
-}
-
-.angel-left, .angel-right {
-  width: 100px;
-  position: relative;
-  top: 20px;
-}
-
-.angel-left { margin-right: 20px; }
-.angel-right { margin-left: 20px; }
-
-.heart-center {
-  width: 100px;
-  margin-bottom: 15px;
-  opacity: 0.8;
-}
-
-footer img {
-  width: 70px;
+.footer-img {
+  width: 90px;
   margin: 10px;
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
-/* === Адаптив под мобильные устройства === */
-@media (max-width: 600px) {
-  .hero-text h1 {
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+  .angel {
+    width: 80px;
+    top: 30px;
+  }
+
+  .decor-top,
+  .decor-bottom {
+    width: 180px;
+  }
+
+  .hero h1 {
     font-size: 36px;
   }
-  .angel-left, .angel-right {
-    width: 70px;
-    top: 10px;
-  }
-  .heart-center {
-    width: 70px;
-  }
-  footer img {
-    width: 50px;
+
+  .hero .date {
+    font-size: 18px;
   }
 }

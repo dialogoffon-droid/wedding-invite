@@ -8,29 +8,22 @@
 </head>
 <body>
 
-  <!-- Верхний декоративный блок -->
-  <div class="decor-top">
-    <img src="images/floral-line-top.png" alt="floral top" class="floral-top">
-  </div>
+  <header class="hero">
+    <img src="images/floral-line-top.png" class="decor-top" alt="">
+    <img src="images/angel-left.png" class="angel angel-left" alt="">
+    <img src="images/angel-right.png" class="angel angel-right" alt="">
+    <h1>Валерий & Александра</h1>
+    <p class="date">15 августа 2025</p>
+    <img src="images/heart-center.png" class="heart-center" alt="">
+    <img src="images/floral-line-bottom.png" class="decor-bottom" alt="">
+  </header>
 
-  <!-- Герой-блок -->
-  <div class="hero">
-    <img src="images/angel-left.png" class="angel-left" alt="angel left">
-    <div class="hero-text">
-      <h1>Валерий & Александра</h1>
-      <p>15 августа 2025</p>
-    </div>
-    <img src="images/angel-right.png" class="angel-right" alt="angel right">
-  </div>
+  <section class="subhero">
+    <h3>Мы рады пригласить вас на наш особенный день!</h3>
+    <img src="images/rings.png" class="rings" alt="">
+  </section>
 
-  <!-- Подгерой-блок -->
-  <div class="subhero">
-    <img src="images/heart-center.png" alt="heart" class="heart-center">
-    <h3>Мы рады пригласить вас на торжество!</h3>
-  </div>
-
-  <!-- Основной блок RSVP -->
-  <div class="section">
+  <section class="section">
     <h2>RSVP</h2>
     <form class="rsvp-form" id="rsvpForm">
       <input type="text" id="guest_name" name="guest_name" placeholder="Ваше имя" required>
@@ -54,49 +47,14 @@
       <button type="submit">Отправить RSVP</button>
       <div id="response"></div>
     </form>
-  </div>
+  </section>
 
-  <!-- Нижний декоративный блок -->
-  <div class="decor-bottom">
-    <img src="images/floral-line-bottom.png" alt="floral bottom" class="floral-bottom">
-  </div>
-
-  <!-- Футер -->
   <footer>
-    <img src="images/rings.png" class="rings" alt="rings">
-    <img src="images/champagne-set.png" class="champagne" alt="champagne">
-    <img src="images/cake.png" class="cake" alt="cake">
-    <p>© 2026 — Наш день</p>
+    <img src="images/champagne-set.png" class="footer-img" alt="">
+    <img src="images/cake.png" class="footer-img" alt="">
+    <p>© 2026 — Валерий & Александра</p>
   </footer>
 
-  <script>
-  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzrU6KazuDtqin3acjvmoUUFGkrBEcICAV0lBuMX67EtLJ8KnixyNlQ62Tf5gv58IYr/exec";
-
-  document.getElementById("rsvpForm").addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const formData = new URLSearchParams();
-    ["guest_name","guest_surname","coming","coming_alone","guests_names","guests_count"]
-      .forEach(id => formData.append(id, document.getElementById(id).value.trim()));
-
-    const resEl = document.getElementById("response");
-    resEl.innerText = "Отправляем...";
-
-    try {
-      const r = await fetch(SCRIPT_URL, { method: "POST", body: formData });
-      const data = await r.json();
-      if(data.status === "success") {
-        resEl.innerText = "✅ Ответ сохранён! Спасибо!";
-        document.getElementById("rsvpForm").reset();
-      } else {
-        resEl.innerText = "⚠ Ошибка: " + (data.message || "неизвестно");
-      }
-    } catch(err) {
-      console.error(err);
-      resEl.innerText = "❌ Ошибка сети.";
-    }
-  });
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
