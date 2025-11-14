@@ -76,10 +76,11 @@ p, li {
   transition: transform 5s ease-in-out;
 }
 
+/* Блок 1 — ангелочки ближе к центру */
+.block1 .decor-left { left: 0; top: 40%; transform: translateY(-50%); max-width: 140px; }
+.block1 .decor-right { right: 0; top: 40%; transform: translateY(-50%); max-width: 140px; }
 .decor-top { top: -20px; left: 50%; transform: translateX(-50%); max-width: 140px; }
 .decor-bottom { bottom: -10px; left: 50%; transform: translateX(-50%); }
-.decor-left { left: -20px; top: 40%; transform: translateY(-50%); max-width: 150px; }
-.decor-right { right: -20px; top: 40%; transform: translateY(-50%); max-width: 150px; }
 
 /* Ховер */
 .invite-block:hover .decor-left { transform: translateY(-50%) rotate(-3deg); }
@@ -150,12 +151,9 @@ p, li {
   max-width: 150px;
   opacity: 1;
 }
+.block3 .decor-right { display: none; }
 
-.block3 .decor-right {
-  display: none;
-}
-
-/* Блок 4 — rings.png в правый нижний угол, чуть больше, не загораживая текст */
+/* Блок 4 — rings.png в правый нижний угол */
 .block4 .decor-bottom {
   bottom: 10px;
   right: 10px;
