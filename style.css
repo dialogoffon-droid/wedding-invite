@@ -144,24 +144,12 @@ p, li {
 
 /* Блок 2 — рамка */
 .block2 {
-  position: relative;
-  padding: 60px 40px; /* немного увеличим внутренний отступ */
-  background: rgba(255,255,255,0.85);
-  border-radius: 20px;
-  overflow: visible; /* чтобы рамка не обрезала внутренности */
+  overflow: visible; /* чтобы рамка была видна полностью */
+  border: 18px solid transparent;
+  padding: 40px;
+  border-image: url("image/floral-line-top.png") 150 round;
 }
 
-.block2::before {
-  content: "";
-  position: absolute;
-  top: -18px;
-  left: -18px;
-  right: -18px;
-  bottom: -18px;
-  background: url("image/floral-line-top.png") center/cover no-repeat;
-  z-index: -1;
-  border-radius: 20px;
-}
 
 /* Блок 3 — место проведения */
 .block3 .decor-left {
