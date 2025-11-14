@@ -177,26 +177,30 @@ p, li {
 }
 
 
-/* Блок 5 — рамка corner-right */
-/* Убираем рамку у блока */
+/* Убираем старую рамку */
 .block5 {
   border: none;
-  padding: 40px; /* можно оставить паддинг для отступов */
-  border-image: none;
+  padding: 60px 40px;
+  position: relative; /* чтобы абсолютные элементы внутри позиционировались относительно блока */
 }
 
-/* Делаем рамку для формы RSVP */
-#rsvpForm {
-  border: 20px solid transparent;
-  border-image: url("image/corner-right.png") 180 round;
-  border-radius: 20px;
-  padding: 30px 20px; /* отступы внутри рамки */
-  max-width: 600px;
-  margin: 0 auto; /* центрируем форму */
-  background: rgba(255, 255, 255, 0.85); /* фон для читаемости */
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-  backdrop-filter: blur(8px);
-  text-align: center;
+/* Новые декоры */
+.block5 .new-left {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  max-width: 150px;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.block5 .new-right {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  max-width: 150px;
+  opacity: 0.9;
+  pointer-events: none;
 }
 
 

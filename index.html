@@ -55,33 +55,37 @@
     <img src="image/rings.png" class="decor-bottom" alt="">
   </section>
 
-  <!-- Блок 5 — RSVP -->
-  <section class="invite-block fade block5">
-    <h2>Опрос</h2>
-    <p>Пожалуйста, подтвердите своё присутствие:</p>
-    <form id="rsvpForm" class="rsvp-form">
-      <input type="text" id="guest_name" name="guest_name" placeholder="Ваше имя" required>
-      <input type="text" id="guest_surname" name="guest_surname" placeholder="Ваша фамилия" required>
-      
-      <select id="coming" name="coming" required>
-        <option value="">Вы придёте?</option>
-        <option value="yes">Да</option>
-        <option value="no">Нет</option>
-      </select>
-      
-      <select id="coming_alone" name="coming_alone">
-        <option value="">Придёте один?</option>
-        <option value="yes">Да</option>
-        <option value="no">Нет</option>
-      </select>
-      
-      <input type="text" id="guests_names" name="guests_names" placeholder="Имя спутника">
-      <input type="number" id="guests_count" name="guests_count" placeholder="Количество гостей">
+<!-- Блок 5 — RSVP -->
+<section class="invite-block fade block5">
+  <img src="image/smoking.png" class="decor-left new-left" alt="Костюм">
+  <img src="image/dress.png" class="decor-right new-right" alt="Свадебное платье">
 
-      <button type="submit">Отправить</button>
-      <div id="response"></div>
-    </form>
-  </section>
+  <h2>Опрос</h2>
+  <p>Пожалуйста, подтвердите своё присутствие:</p>
+  <form id="rsvpForm" class="rsvp-form">
+    <input type="text" id="guest_name" name="guest_name" placeholder="Ваше имя" required>
+    <input type="text" id="guest_surname" name="guest_surname" placeholder="Ваша фамилия" required>
+    
+    <select id="coming" name="coming" required>
+      <option value="">Вы придёте?</option>
+      <option value="yes">Да</option>
+      <option value="no">Нет</option>
+    </select>
+    
+    <select id="coming_alone" name="coming_alone">
+      <option value="">Придёте один?</option>
+      <option value="yes">Да</option>
+      <option value="no">Нет</option>
+    </select>
+    
+    <input type="text" id="guests_names" name="guests_names" placeholder="Имя спутника(если есть)">
+    <input type="number" id="guests_count" name="guests_count" placeholder="Количество гостей">
+
+    <button type="submit">Отправить</button>
+    <div id="response"></div>
+  </form>
+</section>
+
 
   <!-- Блок 6 — До встречи -->
   <section class="invite-block fade block6">
