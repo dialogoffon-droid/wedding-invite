@@ -37,7 +37,7 @@ h1 {
   font-family: "Great Vibes", cursive;
   font-size: 52px;
   color: #4b392e;
-  margin-bottom: 10px;
+  margin: 40px 0 10px 0;
 }
 
 h2 {
@@ -76,11 +76,12 @@ p, li {
   transition: transform 5s ease-in-out;
 }
 
-.decor-top { top: -60px; left: 50%; transform: translateX(-50%); }
-.decor-bottom { bottom: -60px; left: 50%; transform: translateX(-50%); }
-.decor-left { left: -70px; top: 50%; transform: translateY(-50%); }
-.decor-right { right: -70px; top: 50%; transform: translateY(-50%); }
+.decor-top { top: -20px; left: 50%; transform: translateX(-50%); max-width: 140px; }
+.decor-bottom { bottom: -10px; left: 50%; transform: translateX(-50%); }
+.decor-left { left: -20px; top: 40%; transform: translateY(-50%); max-width: 150px; }
+.decor-right { right: -20px; top: 40%; transform: translateY(-50%); max-width: 150px; }
 
+/* Ховер */
 .invite-block:hover .decor-left { transform: translateY(-50%) rotate(-3deg); }
 .invite-block:hover .decor-right { transform: translateY(-50%) rotate(3deg); }
 
@@ -132,6 +133,55 @@ p, li {
   font-weight: bold;
   color: #4c3a2b;
 }
+
+/* Блок 2 — рамка */
+.block2 {
+  border: 18px solid transparent;
+  padding: 40px;
+  border-image: url("image/floral-line-top.png") 150 round;
+}
+
+/* Блок 3 — картинка занимает левую сторону */
+.block3 .decor-left {
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.5;
+}
+
+.block3 .decor-right {
+  display: none;
+}
+
+/* Блок 4 — поднять текст и кольца */
+.block4 h2 {
+  margin-top: 10px;
+}
+
+.block4 .decor-bottom {
+  bottom: -10px;
+  max-width: 160px;
+}
+
+/* Блок 5 — рамка из rings */
+.block5 {
+  border: 20px solid transparent;
+  padding: 40px;
+  border-image: url("image/rings.png") 180 round;
+}
+
+/* Блок 6 — рамка от block2 нижняя */
+.block6 {
+  border: 18px solid transparent;
+  padding: 40px;
+  border-image: url("image/floral-line-bottom.png") 150 round;
+}
+
+/* Блок 7 — PNG ближе к центру */
+.block7 .decor-left { left: -10px; max-width: 130px; }
+.block7 .decor-right { right: -10px; max-width: 130px; }
 
 /* Анимации появления */
 .fade {

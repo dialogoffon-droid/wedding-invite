@@ -29,9 +29,7 @@ document.getElementById("rsvpForm").addEventListener("submit", async (e) => {
 const fadeEls = document.querySelectorAll(".fade");
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-    }
+    if (entry.isIntersecting) entry.target.classList.add("visible");
   });
 }, { threshold: 0.2 });
 
