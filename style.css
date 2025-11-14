@@ -144,12 +144,12 @@ p, li {
 
 /* Блок 2 — рамка */
 .block2 {
-  overflow: visible; /* чтобы рамка была видна полностью */
   border: 18px solid transparent;
-  padding: 40px;
   border-image: url("image/floral-line-top.png") 150 round;
+  border-radius: 20px;
+  padding: 70px 40px; /* больше отступ сверху и снизу под рамку */
+  overflow: visible; /* чтобы рамка не обрезалась */
 }
-
 
 /* Блок 3 — место проведения */
 .block3 .decor-left {
