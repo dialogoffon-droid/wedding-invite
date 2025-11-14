@@ -141,38 +141,36 @@ p, li {
   border-image: url("image/floral-line-top.png") 150 round;
 }
 
-/* Блок 3 — картинка занимает левую сторону */
+/* Блок 3 — corner-left внутри блока, top-left */
 .block3 .decor-left {
   left: 0;
   top: 0;
-  width: 50%;
-  height: 100%;
-  object-fit: contain;
-  opacity: 0.5;
+  width: auto;
+  height: auto;
+  max-width: 150px;
+  opacity: 1;
 }
 
 .block3 .decor-right {
   display: none;
 }
 
-/* Блок 4 — поднять текст и кольца */
-.block4 h2 {
-  margin-top: 10px;
-}
-
+/* Блок 4 — rings.png в правый нижний угол, чуть больше, не загораживая текст */
 .block4 .decor-bottom {
-  bottom: -10px;
-  max-width: 160px;
+  bottom: 10px;
+  right: 10px;
+  left: auto;
+  max-width: 200px;
 }
 
-/* Блок 5 — рамка из rings */
+/* Блок 5 — рамка corner-right */
 .block5 {
   border: 20px solid transparent;
   padding: 40px;
-  border-image: url("image/rings.png") 180 round;
+  border-image: url("image/corner-right.png") 180 round;
 }
 
-/* Блок 6 — рамка от block2 нижняя */
+/* Блок 6 — floral-line-bottom без обрезки */
 .block6 {
   border: 18px solid transparent;
   padding: 40px;
