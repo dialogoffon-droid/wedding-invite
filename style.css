@@ -1,208 +1,264 @@
+/* =============== БАЗА =============== */
+
 body {
+  font-family: 'Cormorant Garamond', serif;
   margin: 0;
-  font-family: "Poppins", sans-serif;
-  background-color: #f9f8f6;
-  color: #3a2e25;
-  overflow-x: hidden;
-}
-
-.page-background {
-  position: fixed;
-  inset: 0;
-  background-image: url("image/paper-texture.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  opacity: 0.35;
-  z-index: -1;
-}
-
-/* Основные блоки */
-.invite-block {
-  position: relative;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 20px;
-  padding: 60px 40px;
-  margin: 80px auto;
-  width: 90%;
-  max-width: 720px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-  backdrop-filter: blur(8px);
+  padding: 0;
+  background: #fff5f8;
+  color: #4b3a3a;
   text-align: center;
-  overflow: hidden;
-  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Текст */
-h1 {
-  font-family: "Great Vibes", cursive;
-  font-size: 52px;
-  color: #4b392e;
-  margin: 40px 0 10px 0;
-}
-
-h2 {
-  font-family: "Great Vibes", cursive;
-  font-size: 38px;
-  color: #5a4335;
-  margin-bottom: 20px;
-}
-
-p, li {
-  font-size: 18px;
-  line-height: 1.7;
-  color: #3e3128;
-}
-
-.subtitle {
-  font-style: italic;
-  color: #7d6b59;
-  margin-bottom: 10px;
-}
-
-.date {
+h1, h2 {
+  margin: 0;
   font-weight: 500;
-  color: #4c3a2b;
+  color: #4b3a3a;
 }
 
-/* Декор */
-.decor-top,
-.decor-bottom,
-.decor-left,
-.decor-right {
-  position: absolute;
-  opacity: 0.85;
-  pointer-events: none;
-  max-width: 180px;
-  transition: transform 5s ease-in-out;
+.invite-block {
+  width: 90%;
+  max-width: 800px;
+  margin: 80px auto;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+  padding: 60px 40px;
+  position: relative;
+  border-radius: 18px;
+  overflow: visible;
+  min-height: 320px;
 }
 
-.decor-top { top: -20px; left: 50%; transform: translateX(-50%); max-width: 140px; }
-.decor-bottom { bottom: -10px; left: 50%; transform: translateX(-50%); }
-.decor-left { left: -20px; top: 40%; transform: translateY(-50%); max-width: 150px; }
-.decor-right { right: -20px; top: 40%; transform: translateY(-50%); max-width: 150px; }
+/* =============== АНИМАЦИЯ =============== */
 
-/* Ховер */
-.invite-block:hover .decor-left { transform: translateY(-50%) rotate(-3deg); }
-.invite-block:hover .decor-right { transform: translateY(-50%) rotate(3deg); }
-
-/* Кнопка карты */
-.map-button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 28px;
-  background: #e9dbc4;
-  color: #3b2c1f;
-  text-decoration: none;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-}
-
-.map-button:hover {
-  background: #d3c2a9;
-  transform: translateY(-2px);
-}
-
-/* RSVP форма */
-.rsvp-form input,
-.rsvp-form select,
-.rsvp-form button {
-  width: 80%;
-  padding: 12px;
-  margin: 8px auto;
-  display: block;
-  font-size: 16px;
-  border-radius: 8px;
-  border: 1px solid #d1c3b4;
-  outline: none;
-}
-
-.rsvp-form button {
-  background: #e9dbc4;
-  border: none;
-  cursor: pointer;
-  font-weight: 500;
-}
-
-.rsvp-form button:hover {
-  background: #d3c2a9;
-}
-
-#response {
-  margin-top: 10px;
-  font-weight: bold;
-  color: #4c3a2b;
-}
-
-/* Блок 2 — рамка */
-.block2 {
-  border: 18px solid transparent;
-  padding: 40px;
-  border-image: url("image/floral-line-top.png") 150 round;
-}
-
-/* Блок 3 — картинка занимает левую сторону */
-.block3 .decor-left {
-  left: 0;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  object-fit: contain;
-  opacity: 0.5;
-}
-
-.block3 .decor-right {
-  display: none;
-}
-
-/* Блок 4 — поднять текст и кольца */
-.block4 h2 {
-  margin-top: 10px;
-}
-
-.block4 .decor-bottom {
-  bottom: -10px;
-  max-width: 160px;
-}
-
-/* Блок 5 — рамка из rings */
-.block5 {
-  border: 20px solid transparent;
-  padding: 40px;
-  border-image: url("image/rings.png") 180 round;
-}
-
-/* Блок 6 — рамка от block2 нижняя */
-.block6 {
-  border: 18px solid transparent;
-  padding: 40px;
-  border-image: url("image/floral-line-bottom.png") 150 round;
-}
-
-/* Блок 7 — PNG ближе к центру */
-.block7 .decor-left { left: -10px; max-width: 130px; }
-.block7 .decor-right { right: -10px; max-width: 130px; }
-
-/* Анимации появления */
 .fade {
   opacity: 0;
   transform: translateY(30px);
   transition: all 1s ease;
 }
 
-.fade.visible {
+.fade.show {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Адаптив */
-@media (max-width: 768px) {
+/* =============== ДЕКОР =============== */
+
+.decor {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.decor-left {
+  left: -20px;
+  top: 45%;
+  transform: translateY(-50%);
+  max-width: 150px;
+}
+
+.decor-right {
+  right: -20px;
+  top: 45%;
+  transform: translateY(-50%);
+  max-width: 150px;
+}
+
+.decor-top {
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 160px;
+}
+
+.decor-bottom {
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 160px;
+}
+
+/* Текст поверх PNG */
+.invite-block > * {
+  position: relative;
+  z-index: 10;
+}
+
+/* ============================================================
+   БЛОК 1 — АНГЕЛЫ И СЕРДЦЕ 
+============================================================ */
+
+.block1 h1 {
+  margin-top: 50px;
+}
+
+.block1 h2 {
+  margin-top: 20px;
+}
+
+/* ============================================================
+   БЛОК 2 — ОДНА РАМКА ПО КОНТУРУ
+============================================================ */
+
+.block2 {
+  border: 18px solid transparent;
+  border-image: url("image/floral-line-top.png") 160 round;
+  padding: 60px 40px;
+}
+
+/* ============================================================
+   БЛОК 3 — ЛЕВАЯ PNG ЗАНИМАЕТ ЛЕВУЮ ЧАСТЬ, ОПУСТИТЬ НИЖЕ
+============================================================ */
+
+.block3 .decor-left {
+  top: 25%;
+  left: -30px;
+  width: 55%;
+  opacity: 0.6;
+}
+
+.block3 .decor-right {
+  display: none;
+}
+
+.block3 h2 {
+  margin-top: 80px;
+}
+
+/* ============================================================
+   БЛОК 4 — ТЕКСТ ВЫШЕ, PNG НЕ ПЕРЕСЕКАЕТ ТЕКСТ
+============================================================ */
+
+.block4 {
+  position: relative;
+  padding-bottom: 80px;
+}
+
+.block4 h2,
+.block4 ul {
+  z-index: 5;
+}
+
+.block4 .decor-bottom {
+  z-index: 1;
+  bottom: -10px;
+  max-width: 180px;
+}
+
+.block4 h2 {
+  margin-top: 20px;
+}
+
+.block4 ul {
+  margin-top: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+/* ============================================================
+   БЛОК 5 — РАМКА ИЗ corner-right.png + RSVP внутри
+============================================================ */
+
+.block5 {
+  border: 20px solid transparent;
+  border-image: url("image/corner-right.png") 170 round;
+  padding: 60px 40px;
+  position: relative;
+}
+
+.block5 form {
+  margin-top: 20px;
+}
+
+/* ============================================================
+   БЛОК 6 — РАМКА ИЗ ВТОРОЙ PNG (floral-line-bottom)
+============================================================ */
+
+.block6 {
+  border: 18px solid transparent;
+  border-image: url("image/floral-line-bottom.png") 160 round;
+  padding: 70px 40px;
+  overflow: visible;
+}
+
+/* ============================================================
+   БЛОК 7 — ПОДНИМАЕМ PNG БЛИЖЕ К ЦЕНТРУ
+============================================================ */
+
+footer .decor-left {
+  left: -10px;
+  max-width: 120px;
+}
+
+footer .decor-right {
+  right: -10px;
+  max-width: 120px;
+}
+
+/* ============================================================
+   ФОРМА RSVP 
+============================================================ */
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 20px;
+  font-size: 18px;
+  border-radius: 12px;
+  border: 1px solid #c9b7b7;
+  background: rgba(255,255,255,0.7);
+}
+
+button {
+  padding: 14px 32px;
+  border-radius: 12px;
+  background: #e4b6c6;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #d99cad;
+}
+
+/* ============================================================
+   АДАПТИВНОСТЬ ДЛЯ ТЕЛЕФОНОВ
+============================================================ */
+
+@media (max-width: 480px) {
+
   .invite-block {
+    width: 92%;
     padding: 40px 20px;
-    margin: 40px auto;
+    margin: 50px auto;
+    min-height: auto;
   }
-  h1 { font-size: 38px; }
-  h2 { font-size: 28px; }
-  p, li { font-size: 16px; }
-  .decor-left, .decor-right { max-width: 110px; }
+
+  .decor-left, .decor-right, .decor-bottom, .decor-top {
+    max-width: 90px !important;
+  }
+
+  .block3 .decor-left {
+    width: 80%;
+    top: 35%;
+    opacity: 0.5;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  form input,
+  form textarea,
+  form select {
+    font-size: 16px;
+  }
 }
