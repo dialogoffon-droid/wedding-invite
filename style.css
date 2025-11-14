@@ -16,6 +16,7 @@ body {
   z-index: -1;
 }
 
+/* Основные блоки */
 .invite-block {
   position: relative;
   background: rgba(255, 255, 255, 0.85);
@@ -31,73 +32,60 @@ body {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-h1 { font-family: "Great Vibes", cursive; font-size: 52px; color: #4b392e; margin: 40px 0 10px 0; }
-h2 { font-family: "Great Vibes", cursive; font-size: 38px; color: #5a4335; margin-bottom: 20px; }
-p, li { font-size: 18px; line-height: 1.7; color: #3e3128; }
-.subtitle { font-style: italic; color: #7d6b59; margin-bottom: 10px; }
-.date { font-weight: 500; color: #4c3a2b; }
+/* Текст */
+h1 {
+  font-family: "Great Vibes", cursive;
+  font-size: 52px;
+  color: #4b392e;
+  margin: 40px 0 10px 0;
+}
+
+h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 38px;
+  color: #5a4335;
+  margin-bottom: 20px;
+}
+
+p, li {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #3e3128;
+}
+
+.subtitle {
+  font-style: italic;
+  color: #7d6b59;
+  margin-bottom: 10px;
+}
+
+.date {
+  font-weight: 500;
+  color: #4c3a2b;
+}
 
 /* Декор */
 .decor-top,
 .decor-bottom,
 .decor-left,
-.decor-right,
-.decor-bottom-right,
-.decor-border,
-.decor-border-bottom {
+.decor-right {
   position: absolute;
   opacity: 0.85;
   pointer-events: none;
-  transition: transform 0.5s ease-in-out;
+  max-width: 180px;
+  transition: transform 5s ease-in-out;
 }
 
 .decor-top { top: -20px; left: 50%; transform: translateX(-50%); max-width: 140px; }
+.decor-bottom { bottom: -10px; left: 50%; transform: translateX(-50%); }
 .decor-left { left: -20px; top: 40%; transform: translateY(-50%); max-width: 150px; }
 .decor-right { right: -20px; top: 40%; transform: translateY(-50%); max-width: 150px; }
-.decor-bottom { bottom: -10px; left: 50%; transform: translateX(-50%); max-width: 160px; }
 
-/* Блок 1 ангелочки ближе к центру */
-.block1 .decor-left { left: 30%; top: 40%; }
-.block1 .decor-right { right: 30%; top: 40%; }
+/* Ховер */
+.invite-block:hover .decor-left { transform: translateY(-50%) rotate(-3deg); }
+.invite-block:hover .decor-right { transform: translateY(-50%) rotate(3deg); }
 
-/* Блок 3 — corner-left внутри блока */
-.block3 .decor-left {
-  left: 0;
-  top: 0;
-  width: auto;
-  height: auto;
-  max-width: 120px;
-  opacity: 1;
-}
-
-/* Блок 4 — rings в правый нижний угол, больше, но не мешает тексту */
-.block4 .decor-bottom-right {
-  right: 10px;
-  bottom: 10px;
-  max-width: 200px;
-}
-
-/* Блок 5 — рамка corner-right */
-.block5 .decor-border {
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  pointer-events: none;
-  opacity: 1;
-}
-
-/* Блок 6 — рамка floral-line-bottom */
-.block6 .decor-border-bottom {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Остальные стили */
+/* Кнопка карты */
 .map-button {
   display: inline-block;
   margin-top: 20px;
@@ -106,11 +94,16 @@ p, li { font-size: 18px; line-height: 1.7; color: #3e3128; }
   color: #3b2c1f;
   text-decoration: none;
   border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
-.map-button:hover { background: #d3c2a9; transform: translateY(-2px); }
 
+.map-button:hover {
+  background: #d3c2a9;
+  transform: translateY(-2px);
+}
+
+/* RSVP форма */
 .rsvp-form input,
 .rsvp-form select,
 .rsvp-form button {
@@ -121,19 +114,95 @@ p, li { font-size: 18px; line-height: 1.7; color: #3e3128; }
   font-size: 16px;
   border-radius: 8px;
   border: 1px solid #d1c3b4;
+  outline: none;
 }
-.rsvp-form button { background: #e9dbc4; border: none; cursor: pointer; font-weight: 500; }
-.rsvp-form button:hover { background: #d3c2a9; }
 
-.block2 { border: 18px solid transparent; padding: 40px; border-image: url("image/floral-line-top.png") 150 round; }
-.block5 { border: 20px solid transparent; padding: 40px; border-image: url("image/rings.png") 180 round; }
+.rsvp-form button {
+  background: #e9dbc4;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
 
-.fade { opacity: 0; transform: translateY(30px); transition: all 1s ease; }
-.fade.visible { opacity: 1; transform: translateY(0); }
+.rsvp-form button:hover {
+  background: #d3c2a9;
+}
 
+#response {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #4c3a2b;
+}
+
+/* Блок 2 — рамка */
+.block2 {
+  border: 18px solid transparent;
+  padding: 40px;
+  border-image: url("image/floral-line-top.png") 150 round;
+}
+
+/* Блок 3 — картинка занимает левую сторону */
+.block3 .decor-left {
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.5;
+}
+
+.block3 .decor-right {
+  display: none;
+}
+
+/* Блок 4 — поднять текст и кольца */
+.block4 h2 {
+  margin-top: 10px;
+}
+
+.block4 .decor-bottom {
+  bottom: -10px;
+  max-width: 160px;
+}
+
+/* Блок 5 — рамка из rings */
+.block5 {
+  border: 20px solid transparent;
+  padding: 40px;
+  border-image: url("image/rings.png") 180 round;
+}
+
+/* Блок 6 — рамка от block2 нижняя */
+.block6 {
+  border: 18px solid transparent;
+  padding: 40px;
+  border-image: url("image/floral-line-bottom.png") 150 round;
+}
+
+/* Блок 7 — PNG ближе к центру */
+.block7 .decor-left { left: -10px; max-width: 130px; }
+.block7 .decor-right { right: -10px; max-width: 130px; }
+
+/* Анимации появления */
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Адаптив */
 @media (max-width: 768px) {
-  .invite-block { padding: 40px 20px; margin: 40px auto; }
-  h1 { font-size: 38px; } h2 { font-size: 28px; }
+  .invite-block {
+    padding: 40px 20px;
+    margin: 40px auto;
+  }
+  h1 { font-size: 38px; }
+  h2 { font-size: 28px; }
   p, li { font-size: 16px; }
-  .decor-left, .decor-right, .decor-bottom-right { max-width: 110px; }
+  .decor-left, .decor-right { max-width: 110px; }
 }
