@@ -142,16 +142,21 @@ p, li {
   border-image: url("image/floral-line-top.png") 150 round;
 }
 
-/* Блок 3 — corner-left внутри блока, top-left */
+/* Блок 3 — место проведения */
 .block3 .decor-left {
-  left: 0;
-  top: 0;
+  position: absolute;
+  top: 0;      /* всегда вверху блока */
+  left: 0;     /* всегда слева */
   width: auto;
   height: auto;
-  max-width: 150px;
+  max-width: 200px;  /* увеличенный размер */
   opacity: 1;
+  transform: none;   /* убираем любые смещения */
 }
-.block3 .decor-right { display: none; }
+
+.block3 .decor-right {
+  display: none;
+}
 
 /* Блок 4 — rings.png в правый нижний угол */
 .block4 .decor-bottom {
