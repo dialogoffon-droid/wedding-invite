@@ -73,7 +73,7 @@ p, li {
   opacity: 0.85;
   pointer-events: none;
   max-width: 180px;
-  transition: transform 5s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 /* Блок 1 — ангелочки ближе к центру */
@@ -82,16 +82,15 @@ p, li {
 .decor-top { top: -20px; left: 50%; transform: translateX(-50%); max-width: 140px; }
 .decor-bottom { bottom: -10px; left: 50%; transform: translateX(-50%); }
 
-/* Ховер только для блоков, где нужно движение */
+/* Hover эффекты */
 .block1:hover .decor-left,
 .block1:hover .decor-right,
 .block4:hover .decor-left,
 .block4:hover .decor-right,
 .block7:hover .decor-left,
 .block7:hover .decor-right {
-  transform: translateY(-50%) rotate(3deg); /* левый/правый можно подкорректировать */
+  transform: translateY(-50%) rotate(3deg);
 }
-
 
 /* Кнопка карты */
 .map-button {
@@ -147,44 +146,39 @@ p, li {
   border: 18px solid transparent;
   border-image: url("image/floral-line-top.png") 150 round;
   border-radius: 20px;
-  padding: 70px 40px; /* больше отступ сверху и снизу под рамку */
-  overflow: visible; /* чтобы рамка не обрезалась */
+  padding: 70px 40px;
+  overflow: visible;
 }
 
 /* Блок 3 — место проведения */
 .block3 .decor-left {
   position: absolute;
-  top: 0;      /* всегда вверху блока */
-  left: 0;     /* всегда слева */
+  top: 0;
+  left: 0;
   width: auto;
   height: auto;
-  max-width: 200px;  /* увеличенный размер */
+  max-width: 200px;
   opacity: 1;
-  transform: none;   /* убираем любые смещения */
+  transform: none;
 }
+.block3 .decor-right { display: none; }
 
-.block3 .decor-right {
-  display: none;
-}
-
-/* Блок 4 — rings.png в правый нижний угол */
+/* Блок 4 — rings.png */
 .block4 .decor-bottom {
   bottom: 10px;
-  right: 10px;   /* фиксируем справа */
-  left: auto;    /* убираем левый отступ */
-  transform: none; /* убираем смещение по X */
-  max-width: 200px; /* размер можно оставить */
+  right: 10px;
+  left: auto;
+  transform: none;
+  max-width: 200px;
 }
 
-
-/* Убираем старую рамку */
+/* Блок 5 — новые декоры */
 .block5 {
   border: none;
   padding: 60px 40px;
-  position: relative; /* чтобы абсолютные элементы внутри позиционировались относительно блока */
+  position: relative;
 }
 
-/* Новые декоры */
 .block5 .new-left {
   position: absolute;
   top: 10px;
@@ -203,8 +197,7 @@ p, li {
   pointer-events: none;
 }
 
-
-/* Блок 6 — floral-line-bottom без обрезки */
+/* Блок 6 — floral-line-bottom */
 .block6 {
   border: 18px solid transparent;
   padding: 40px;
@@ -215,7 +208,7 @@ p, li {
 .block7 .decor-left { left: -10px; max-width: 130px; }
 .block7 .decor-right { right: -10px; max-width: 130px; }
 
-/* Анимации появления */
+/* Анимации */
 .fade {
   opacity: 0;
   transform: translateY(30px);
@@ -227,14 +220,47 @@ p, li {
   transform: translateY(0);
 }
 
-/* Адаптив */
+/* ================== */
+/* Мобильная адаптация */
 @media (max-width: 768px) {
-  .invite-block {
-    padding: 40px 20px;
-    margin: 40px auto;
+  /* padding блоков */
+  .invite-block { padding: 30px 15px; margin: 30px auto; }
+
+  /* текст */
+  h1 { font-size: 32px; }
+  h2 { font-size: 24px; }
+  p, li { font-size: 14px; line-height: 1.5; }
+
+  /* декоры уменьшить */
+  .decor-left, .decor-right, .decor-top, .decor-bottom { max-width: 80px; }
+
+  /* блок 1,4,7: абсолютные элементы станут относительными */
+  .block1 .decor-left,
+  .block1 .decor-right,
+  .block4 .decor-bottom,
+  .block7 .decor-left,
+  .block7 .decor-right,
+  .decor-top {
+    position: relative;
+    display: block;
+    margin: 10px auto 0 auto;
+    transform: none;
   }
-  h1 { font-size: 38px; }
-  h2 { font-size: 28px; }
-  p, li { font-size: 16px; }
-  .decor-left, .decor-right { max-width: 110px; }
+
+  /* блок 5: новые декоры */
+  .block5 .new-left, .block5 .new-right {
+    max-width: 80px;
+    top: 5px;
+    position: relative;
+    margin: 0 auto 10px auto;
+    display: block;
+  }
+
+  /* RSVP форма растягивается на ширину */
+  #rsvpForm input,
+  #rsvpForm select,
+  #rsvpForm button {
+    width: 95%;
+    margin: 6px auto;
+  }
 }
