@@ -82,16 +82,6 @@ p, li {
 .decor-top { top: -20px; left: 50%; transform: translateX(-50%); max-width: 140px; }
 .decor-bottom { bottom: -10px; left: 50%; transform: translateX(-50%); }
 
-/* Hover эффекты */
-.block1:hover .decor-left,
-.block1:hover .decor-right,
-.block4:hover .decor-left,
-.block4:hover .decor-right,
-.block7:hover .decor-left,
-.block7:hover .decor-right {
-  transform: translateY(-50%) rotate(3deg);
-}
-
 /* Кнопка карты */
 .map-button {
   display: inline-block;
