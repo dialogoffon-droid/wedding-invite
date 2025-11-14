@@ -170,10 +170,12 @@ p, li {
 /* Блок 4 — rings.png в правый нижний угол */
 .block4 .decor-bottom {
   bottom: 10px;
-  right: 10px;
-  left: auto;
-  max-width: 200px;
+  right: 10px;   /* фиксируем справа */
+  left: auto;    /* убираем левый отступ */
+  transform: none; /* убираем смещение по X */
+  max-width: 200px; /* размер можно оставить */
 }
+
 
 /* Блок 5 — рамка corner-right */
 .block5 {
