@@ -143,3 +143,15 @@ footer p { font-size: 3.5vw; margin-top: 2vw; }
     margin-top: 1rem;
   }
 }
+/* ==============================
+   Footer (6 блок) — корректировка PNG
+   ============================== */
+footer .decor-left,
+footer .decor-right {
+  max-width: 120px;        /* уменьшаем размер PNG */
+  top: 50%;                /* центр по вертикали */
+  transform: translateY(-50%);
+}
+
+footer .decor-left { left: 5%; }   /* отступ слева */
+footer .decor-right { right: 5%; } /* отступ справа */
