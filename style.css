@@ -73,14 +73,17 @@ p, li {
   opacity: 0.85;
   pointer-events: none;
   max-width: 180px;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 5s ease-in-out;
 }
 
-/* Блок 1 — ангелочки ближе к центру */
-.block1 .decor-left { left: 0; top: 40%; transform: translateY(-50%); max-width: 140px; }
-.block1 .decor-right { right: 0; top: 40%; transform: translateY(-50%); max-width: 140px; }
 .decor-top { top: -20px; left: 50%; transform: translateX(-50%); max-width: 140px; }
 .decor-bottom { bottom: -10px; left: 50%; transform: translateX(-50%); }
+.decor-left { left: -20px; top: 40%; transform: translateY(-50%); max-width: 150px; }
+.decor-right { right: -20px; top: 40%; transform: translateY(-50%); max-width: 150px; }
+
+/* Ховер */
+.invite-block:hover .decor-left { transform: translateY(-50%) rotate(-3deg); }
+.invite-block:hover .decor-right { transform: translateY(-50%) rotate(3deg); }
 
 /* Кнопка карты */
 .map-button {
@@ -134,60 +137,42 @@ p, li {
 /* Блок 2 — рамка */
 .block2 {
   border: 18px solid transparent;
+  padding: 40px;
   border-image: url("image/floral-line-top.png") 150 round;
-  border-radius: 20px;
-  padding: 70px 40px;
-  overflow: visible;
 }
 
-/* Блок 3 — место проведения */
+/* Блок 3 — картинка занимает левую сторону */
 .block3 .decor-left {
-  position: absolute;
-  top: 0;
   left: 0;
-  width: auto;
-  height: auto;
-  max-width: 200px;
-  opacity: 1;
-  transform: none;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.5;
 }
-.block3 .decor-right { display: none; }
 
-/* Блок 4 — rings.png */
+.block3 .decor-right {
+  display: none;
+}
+
+/* Блок 4 — поднять текст и кольца */
+.block4 h2 {
+  margin-top: 10px;
+}
+
 .block4 .decor-bottom {
-  bottom: 10px;
-  right: 10px;
-  left: auto;
-  transform: none;
-  max-width: 200px;
+  bottom: -10px;
+  max-width: 160px;
 }
 
-/* Блок 5 — новые декоры */
+/* Блок 5 — рамка из rings */
 .block5 {
-  border: none;
-  padding: 60px 40px;
-  position: relative;
+  border: 20px solid transparent;
+  padding: 40px;
+  border-image: url("image/rings.png") 180 round;
 }
 
-.block5 .new-left {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  max-width: 150px;
-  opacity: 0.9;
-  pointer-events: none;
-}
-
-.block5 .new-right {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  max-width: 150px;
-  opacity: 0.9;
-  pointer-events: none;
-}
-
-/* Блок 6 — floral-line-bottom */
+/* Блок 6 — рамка от block2 нижняя */
 .block6 {
   border: 18px solid transparent;
   padding: 40px;
@@ -198,7 +183,7 @@ p, li {
 .block7 .decor-left { left: -10px; max-width: 130px; }
 .block7 .decor-right { right: -10px; max-width: 130px; }
 
-/* Анимации */
+/* Анимации появления */
 .fade {
   opacity: 0;
   transform: translateY(30px);
@@ -210,47 +195,14 @@ p, li {
   transform: translateY(0);
 }
 
-/* ================== */
-/* Мобильная адаптация */
+/* Адаптив */
 @media (max-width: 768px) {
-  /* padding блоков */
-  .invite-block { padding: 30px 15px; margin: 30px auto; }
-
-  /* текст */
-  h1 { font-size: 32px; }
-  h2 { font-size: 24px; }
-  p, li { font-size: 14px; line-height: 1.5; }
-
-  /* декоры уменьшить */
-  .decor-left, .decor-right, .decor-top, .decor-bottom { max-width: 80px; }
-
-  /* блок 1,4,7: абсолютные элементы станут относительными */
-  .block1 .decor-left,
-  .block1 .decor-right,
-  .block4 .decor-bottom,
-  .block7 .decor-left,
-  .block7 .decor-right,
-  .decor-top {
-    position: relative;
-    display: block;
-    margin: 10px auto 0 auto;
-    transform: none;
+  .invite-block {
+    padding: 40px 20px;
+    margin: 40px auto;
   }
-
-  /* блок 5: новые декоры */
-  .block5 .new-left, .block5 .new-right {
-    max-width: 80px;
-    top: 5px;
-    position: relative;
-    margin: 0 auto 10px auto;
-    display: block;
-  }
-
-  /* RSVP форма растягивается на ширину */
-  #rsvpForm input,
-  #rsvpForm select,
-  #rsvpForm button {
-    width: 95%;
-    margin: 6px auto;
-  }
+  h1 { font-size: 38px; }
+  h2 { font-size: 28px; }
+  p, li { font-size: 16px; }
+  .decor-left, .decor-right { max-width: 110px; }
 }
