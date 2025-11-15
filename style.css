@@ -113,7 +113,10 @@ footer p { font-size: 3.5vw; margin-top: 2vw; }
 
 @media (min-width: 1025px) {
   /* Общие блоки */
-  .invite-block { padding: 3rem; margin: 5rem auto; }
+  .invite-block {
+    padding: 3rem;
+    margin: 5rem auto;
+  }
   h1 { font-size: 2.5rem; }
   h2 { font-size: 1.75rem; }
   p, li { font-size: 1rem; }
@@ -121,7 +124,22 @@ footer p { font-size: 3.5vw; margin-top: 2vw; }
 
   /* RSVP и Footer — компактнее */
   #rsvpForm, footer.invite-block {
-    padding: 2rem;
-    max-width: 600px;
+    padding: 1.5rem;        /* меньше, чем у остальных блоков */
+    max-width: 550px;       /* более узкие */
+    margin: 3rem auto;      /* уменьшаем верх/низ */
+  }
+
+  /* Поля формы и кнопки */
+  #rsvpForm input,
+  #rsvpForm select,
+  #rsvpForm button {
+    padding: 0.8rem 1rem;   /* меньше по высоте */
+    font-size: 1rem;        /* компактнее текст */
+  }
+
+  /* Footer текст */
+  footer p {
+    font-size: 1rem;
+    margin-top: 1rem;
   }
 }
