@@ -102,7 +102,7 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
 /* Footer */
 footer p { font-size: 3.5vw; margin-top: 2vw; }
 
-/* Универсальная адаптация через медиа-запросы */
+/* Медиа-запросы для планшетов и десктопов */
 @media (max-width: 768px) {
   .invite-block { padding: 6vw; margin: 6vw auto; }
   h1 { font-size: 7vw; }

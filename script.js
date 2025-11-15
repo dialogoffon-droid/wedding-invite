@@ -12,11 +12,7 @@ document.getElementById("rsvpForm").addEventListener("submit", async (e) => {
   resEl.innerText = "Отправляем...";
 
   try {
-    const r = await fetch(SCRIPT_URL, {
-      method: "POST",
-      body: formData
-    });
-
+    const r = await fetch(SCRIPT_URL, { method: "POST", body: formData });
     const data = await r.json();
 
     if (data.status === "success") {
@@ -25,7 +21,6 @@ document.getElementById("rsvpForm").addEventListener("submit", async (e) => {
     } else {
       resEl.innerText = "⚠ Ошибка: " + (data.message || "неизвестно");
     }
-
   } catch (err) {
     console.error(err);
     resEl.innerText = "❌ Ошибка сети.";
