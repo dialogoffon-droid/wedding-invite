@@ -79,7 +79,7 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
 .map-button:hover { background: #c5b294; }
 
 /* ===========================================
-   5 блок — RSVP (картинка - форма - картинка)
+   5 блок — RSVP (картинка - надпись - картинка + форма)
    =========================================== */
 .rsvp-block .rsvp-content {
     display: flex;
@@ -87,20 +87,25 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
     justify-content: center;
     gap: 2vw;
     flex-wrap: nowrap;
-    position: relative;
+    margin-bottom: 2rem;
 }
 
 .rsvp-block .decor-left,
 .rsvp-block .decor-right {
-    position: relative;
     max-width: 120px;
     pointer-events: none;
+}
+
+.rsvp-block h2 {
+    margin: 0;
+    font-size: 2rem;
+    text-align: center;
 }
 
 #rsvpForm {
     width: 100%;
     max-width: 400px;
-    margin: 0;
+    margin: 0 auto;
     padding: 2rem;
     box-sizing: border-box;
     background: rgba(255,255,255,0.85);
@@ -108,7 +113,6 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
     box-shadow: 0 1rem 2rem rgba(0,0,0,0.08);
 }
 
-/* Поля формы */
 #rsvpForm input,
 #rsvpForm select,
 #rsvpForm button {
@@ -129,6 +133,24 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
 #rsvpForm button:hover { background: #c5b294; }
 
 #response { margin-top: 1rem; font-weight: bold; font-size: 1rem; }
+
+/* ===========================================
+   Мобильные адаптации
+   =========================================== */
+@media (max-width: 768px) {
+    .rsvp-block .rsvp-content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .rsvp-block .decor-left,
+    .rsvp-block .decor-right {
+        max-width: 40%;
+    }
+    #rsvpForm {
+        max-width: 90%;
+        padding: 1.5rem;
+    }
+}
 
 /* ===========================================
    6 блок — Footer
