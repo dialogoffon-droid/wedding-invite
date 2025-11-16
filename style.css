@@ -203,13 +203,13 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
 .decor-bottom { bottom: -5%; left: 50%; transform: translateX(-50%); }
 .decor-left {
     left: -0%;
-    top: 15%;
+    top: 20%;
     transform: translateY(-50%);
 }
 .decor-right {
     right: -0%;
-    top: 65%;
-    ansform: translateY(-50%);
+    top: 55%;
+    transform: translateY(-50%);
 }
 
 /* Кнопки */
