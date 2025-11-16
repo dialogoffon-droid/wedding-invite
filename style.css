@@ -66,14 +66,34 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
 /* Блок 2.5 — базовый размер 1024×1024, но адаптивный */
 .calendar-block {
     position: relative;
-    width: 70vw;          /* адаптивный квадрат */
-    max-width: 480px;     /* чтобы не растягивался слишком сильно */
-    aspect-ratio: 1 / 1;  /* идеальный квадрат */
+    width: 100%;      /* блок под размер рамки */
+    max-width: 520px; /* ограничение */
+    aspect-ratio: 1/1;
     margin: 0 auto;
+}
+
+.calendar-frame {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.calendar-image {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 80%;    /* меньше рамки на 20% */
+    height: 80%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+    z-index: 2;
 }
 /* Отступы вокруг календарного блока, чтобы он стал таким же, как остальные */
 .calendar-section {
-    padding: 8vw 0;
+    padding: 0;
+    margin: 5vw auto;     /* центрируем по вертикали */
 }
 
 .calendar-frame {
