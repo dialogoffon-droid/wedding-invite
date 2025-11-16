@@ -1,10 +1,28 @@
+/* ===========================================
+   Шрифты под мультяшный стиль
+   =========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Luckiest+Guy&display=swap');
+
 body {
   margin: 0;
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Comic Neue", cursive;
   background-color: #f8f5f0;
   color: #3b3b3b;
   overflow-x: hidden;
 }
+
+h1, h2 {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: 6vw; color: #4c3b2f; }
+h2 { font-size: 4.5vw; color: #5a4639; }
+
+p, li { font-size: 3.5vw; line-height: 1.6; }
+.subtitle { font-style: italic; color: #7a6a58; margin-bottom: 0.5rem; }
+.date { font-weight: 600; color: #4b3a2b; }
 
 .page-background {
   position: fixed;
@@ -41,6 +59,7 @@ body {
   transform: translateY(0);
 }
 
+/* Декорации */
 .decor-top, .decor-bottom, .decor-left, .decor-right {
   position: absolute;
   opacity: 0.9;
@@ -48,22 +67,12 @@ body {
   max-width: 20%;
 }
 
-.decor-top { top: -5%; left: 50%; transform: translateX(-50%);}
-.decor-bottom { bottom: -5%; left: 50%; transform: translateX(-50%);}
-.decor-left { left: -5%; top: 50%; transform: translateY(-50%);}
-.decor-right { right: -5%; top: 50%; transform: translateY(-50%);}
+.decor-top { top: -5%; left: 50%; transform: translateX(-50%); }
+.decor-bottom { bottom: -5%; left: 50%; transform: translateX(-50%); }
+.decor-left { left: -5%; top: 50%; transform: translateY(-50%); }
+.decor-right { right: -5%; top: 50%; transform: translateY(-50%); }
 
-h1, h2 {
-  font-family: "Playfair Display", serif;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-h1 { font-size: 6vw; color: #4c3b2f; }
-h2 { font-size: 4.5vw; color: #5a4639; }
-p, li { font-size: 3.5vw; line-height: 1.6; }
-.subtitle { font-style: italic; color: #7a6a58; margin-bottom: 0.5rem; }
-.date { font-weight: 600; color: #4b3a2b; }
-
+/* Кнопки */
 .map-button {
   display: inline-block;
   margin-top: 1rem;
@@ -76,6 +85,9 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
 }
 .map-button:hover { background: #c5b294; transform: scale(1.05); }
 
+/* ===========================
+   RSVP блок
+=========================== */
 #rsvpForm input, #rsvpForm select, #rsvpForm button {
   width: 90%;
   padding: 1rem;
@@ -96,8 +108,22 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
   transition: all 0.3s ease;
 }
 #rsvpForm button:hover { background: #c5b294; transform: scale(1.05); }
+
 #response { margin-top: 1rem; font-weight: bold; font-size: 1rem; }
 
+#rsvpForm .decor-left, #rsvpForm .decor-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 120px;
+  pointer-events: none;
+}
+#rsvpForm .decor-left { left: 5%; }
+#rsvpForm .decor-right { right: 5%; }
+
+/* ===========================
+   Footer
+=========================== */
 footer.footer-block {
   display: flex;
   align-items: center;
@@ -117,6 +143,9 @@ footer.footer-block {
 .footer-text { flex-shrink: 0; margin: 0 20px; font-size: 1.25rem; }
 .footer-left, .footer-right { max-width: 120px; }
 
+/* ===========================
+   Медиа-запросы
+=========================== */
 @media (max-width: 768px) {
   h1 { font-size: 7vw; }
   h2 { font-size: 5vw; }
