@@ -1,11 +1,9 @@
 /* ===========================================
-   Шрифты под мультяшный стиль
-   =========================================== */
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-
+   Свадебные шрифты
+=========================================== */
 body {
   margin: 0;
-  font-family: "Comic Neue", cursive;
+  font-family: 'Playfair Display', serif;
   background-color: #f8f5f0;
   color: #3b3b3b;
   overflow-x: hidden;
@@ -16,14 +14,17 @@ h1, h2 {
   font-family: 'Great Vibes', cursive;
   font-weight: 400;
   margin-bottom: 1rem;
+  color: #4c3b2f;
 }
-h1 { font-size: 6vw; color: #4c3b2f; }
-h2 { font-size: 4.5vw; color: #5a4639; }
+h1 { font-size: 6vw; }
+h2 { font-size: 4.5vw; }
 
+/* Основной текст */
 p, li { font-size: 3.5vw; line-height: 1.6; }
 .subtitle { font-style: italic; color: #7a6a58; margin-bottom: 0.5rem; }
 .date { font-weight: 600; color: #4b3a2b; }
 
+/* Фон страницы */
 .page-background {
   position: fixed;
   top: 0;
@@ -37,6 +38,7 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
   z-index: -1;
 }
 
+/* Основные блоки */
 .invite-block {
   position: relative;
   background: linear-gradient(145deg, #ffffff, #fdf6f0);
@@ -66,7 +68,6 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
   pointer-events: none;
   max-width: 20%;
 }
-
 .decor-top { top: -5%; left: 50%; transform: translateX(-50%); }
 .decor-bottom { bottom: -5%; left: 50%; transform: translateX(-50%); }
 .decor-left { left: -5%; top: 50%; transform: translateY(-50%); }
