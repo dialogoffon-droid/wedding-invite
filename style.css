@@ -376,7 +376,7 @@ h2.rsvp-title {
 /* ===== ПК версия (фикс гигантской анкеты) ===== */
 @media (min-width: 1024px) {
     .rsvp-title {
-        font-size: 5rem !important;
+        font-size: 20px !important;
         margin-bottom: 20px;
     }
 
