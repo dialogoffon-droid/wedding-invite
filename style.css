@@ -260,3 +260,33 @@ footer .decor-right { right: 5%; }
   footer p { font-size: 1rem; margin-top: 1rem; }
   footer .decor-left, footer .decor-right { max-width: 150px; }
 }
+/* ================================
+   Исправление 5-го блока (RSVP)
+   PNG — сверху слева и справа
+   ================================ */
+#rsvpForm .decor-left,
+#rsvpForm .decor-right {
+  position: absolute;
+  top: 0;            /* теперь строго сверху */
+  transform: none;   /* убираем смещение по центру */
+  max-width: 90px;
+  pointer-events: none;
+}
+
+#rsvpForm .decor-left {
+  left: 0;           /* верхний левый угол */
+}
+
+#rsvpForm .decor-right {
+  right: 0;          /* верхний правый угол */
+}
+
+/* ======== Мобильная версия ======== */
+@media (max-width: 768px) {
+
+  #rsvpForm .decor-left,
+  #rsvpForm .decor-right {
+    max-width: 25%;      /* красиво уменьшаем на телефонах */
+    top: -10px;          /* чуть выше текста */
+  }
+}
