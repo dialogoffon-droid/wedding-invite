@@ -1,5 +1,5 @@
 const SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbzrU6KazuDtqin3acjvmoUUFGkrBEcICAV0lBuMX67EtLJ8KnixyNlQ62Tf5gv58IYr/exec";
+"https://script.google.com/macros/s/AKfycbzrU6KazuDtqin3acjvmoUUFGkrBEcICAV0lBuMX67EtLJ8KnixyNlQ62Tf5gv58IYr/exec";
 
 document.getElementById("rsvpForm").addEventListener("submit", async (e) => {
   e.preventDefault();

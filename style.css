@@ -1,6 +1,3 @@
-/* ===========================================
-   Общие стили
-   =========================================== */
 body {
   margin: 0;
   font-family: "Cormorant Garamond", serif;
@@ -22,25 +19,21 @@ body {
   z-index: -1;
 }
 
-/* ===========================================
-   Основные блоки (1–4)
-   =========================================== */
 .invite-block {
   position: relative;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 1.5rem;
+  background: linear-gradient(145deg, #ffffff, #fdf6f0);
+  border-radius: 20px;
   padding: 5vw;
   margin: 5vw auto;
   width: 90%;
   max-width: 700px;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.08);
-  backdrop-filter: blur(5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   text-align: center;
   overflow: hidden;
   box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
-/* Декорации */
 .decor-top, .decor-bottom, .decor-left, .decor-right {
   position: absolute;
   opacity: 0.9;
@@ -48,12 +41,11 @@ body {
   max-width: 20%;
 }
 
-.decor-top { top: -5%; left: 50%; transform: translateX(-50%); }
-.decor-bottom { bottom: -5%; left: 50%; transform: translateX(-50%); }
-.decor-left { left: -5%; top: 50%; transform: translateY(-50%); }
-.decor-right { right: -5%; top: 50%; transform: translateY(-50%); }
+.decor-top { top: -5%; left: 50%; transform: translateX(-50%);}
+.decor-bottom { bottom: -5%; left: 50%; transform: translateX(-50%);}
+.decor-left { left: -5%; top: 50%; transform: translateY(-50%);}
+.decor-right { right: -5%; top: 50%; transform: translateY(-50%);}
 
-/* Текст */
 h1, h2 {
   font-family: "Playfair Display", serif;
   font-weight: 600;
@@ -65,7 +57,6 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
 .subtitle { font-style: italic; color: #7a6a58; margin-bottom: 0.5rem; }
 .date { font-weight: 600; color: #4b3a2b; }
 
-/* Кнопки */
 .map-button {
   display: inline-block;
   margin-top: 1rem;
@@ -73,41 +64,20 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
   background: #d8c9b0;
   color: #3b2c1f;
   text-decoration: none;
-  border-radius: 0.5rem;
+  border-radius: 12px;
   transition: background 0.3s ease;
 }
 .map-button:hover { background: #c5b294; }
 
-/* ===========================================
-   5 блок — RSVP
-   =========================================== */
-#rsvpForm {
-  position: relative;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 1.5rem;
-  padding: 4vw 5vw;
-  min-height: 250px;
-  margin: 5vw auto;
+#rsvpForm input, #rsvpForm select, #rsvpForm button {
   width: 90%;
-  max-width: 700px;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.08);
-  backdrop-filter: blur(5px);
-  text-align: center;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-/* Поля формы и кнопки */
-#rsvpForm input,
-#rsvpForm select,
-#rsvpForm button {
-  width: 90%;
-  padding: 1rem 1.2rem;
+  padding: 1rem;
   margin: 1rem auto;
   display: block;
   font-size: 1rem;
+  border-radius: 12px;
+  border: 1px solid #ccc;
   box-sizing: border-box;
-  border-radius: 0.5rem;
 }
 
 #rsvpForm button {
@@ -119,7 +89,6 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
 #rsvpForm button:hover { background: #c5b294; }
 #response { margin-top: 1rem; font-weight: bold; font-size: 1rem; }
 
-/* PNG декорации RSVP */
 #rsvpForm .decor-left,
 #rsvpForm .decor-right {
   position: absolute;
@@ -131,132 +100,54 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
 #rsvpForm .decor-left { left: 5%; }
 #rsvpForm .decor-right { right: 5%; }
 
-/* ===========================================
-   6 блок — Footer
-   =========================================== */
-footer.invite-block {
-  position: relative;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 1.5rem;
-  padding: 4vw 5vw;
-  min-height: 200px;
-  margin: 5vw auto;
-  width: 90%;
-  max-width: 700px;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.08);
-  backdrop-filter: blur(5px);
-  text-align: center;
-  overflow: hidden;
-  box-sizing: border-box;
+footer.footer-block {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: nowrap; /* PNG и текст на одном уровне */
+  flex-wrap: nowrap;
+  background: linear-gradient(145deg, #ffffff, #fdf6f0);
+  border-radius: 20px;
+  padding: 4vw 5vw;
+  min-height: 180px;
+  margin: 5vw auto;
+  width: 90%;
+  max-width: 700px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  box-sizing: border-box;
 }
 
-footer p {
-  font-size: 3.5vw;
-  margin: 0 1vw;
+.footer-text {
   flex-shrink: 0;
+  margin: 0 20px;
+  font-size: 1.25rem;
 }
 
-/* PNG декорации Footer — ПК */
-footer .decor-left,
-footer .decor-right {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+.footer-left, .footer-right {
   max-width: 120px;
-  pointer-events: none;
 }
-footer .decor-left { left: 5%; }
-footer .decor-right { right: 5%; }
 
-/* ===========================================
-   Медиа-запросы для планшетов и мобильных
-   =========================================== */
 @media (max-width: 768px) {
-  /* Основные блоки и Footer */
-  .invite-block, #rsvpForm, footer.invite-block {
-    padding: 6vw; 
-    margin: 6vw auto;
-    min-height: auto;
-  }
-
-  /* Текст */
   h1 { font-size: 7vw; }
   h2 { font-size: 5vw; }
-  p, li, footer p, #response { font-size: 4vw; }
-
-  /* Декорации */
-  .decor-top, .decor-bottom, .decor-left, .decor-right { max-width: 25%; }
-
-  /* RSVP поля */
-  #rsvpForm input, #rsvpForm select, #rsvpForm button { padding: 2vw; font-size: 3.5vw; }
-
-  /* RSVP PNG под текстом */
-  #rsvpForm .decor-left,
-  #rsvpForm .decor-right {
+  p, li, #response, .footer-text { font-size: 4vw; }
+  
+  #rsvpForm .decor-left, #rsvpForm .decor-right,
+  .footer-left, .footer-right {
+    max-width: 25%;
     position: relative;
-    display: inline-block;
     transform: none;
-    max-width: 40%;
-    margin: 1vw 2vw 0 2vw;
+    margin: 0 5px;
   }
-
-  /* Footer PNG и текст на одном уровне */
-  footer.invite-block {
-    flex-direction: row; /* PNG - текст - PNG */
-    align-items: center;
+  
+  footer.footer-block {
+    flex-direction: row;
     justify-content: center;
-    padding: 4vw 2vw;
-  }
-
-  footer p {
-    font-size: 4vw;
-    margin: 0 2vw;
-    text-align: center;
-  }
-
-  footer .decor-left,
-  footer .decor-right {
-    position: relative; /* inline под текстом */
-    transform: none;
-    display: inline-block;
-    max-width: 20%;
-    margin: 0;
   }
 }
 
-/* ===========================================
-   Медиа-запросы для ПК
-   =========================================== */
 @media (min-width: 1025px) {
-  /* Основные блоки 1–4 */
-  .invite-block { padding: 3rem; margin: 5rem auto; }
   h1 { font-size: 2.5rem; }
   h2 { font-size: 1.75rem; }
-  p, li { font-size: 1rem; }
+  p, li, .footer-text { font-size: 1rem; }
   .decor-top, .decor-bottom, .decor-left, .decor-right { max-width: 180px; }
-
-  /* RSVP блок */
-  #rsvpForm {
-    padding: 3rem;
-    min-height: 220px;
-    max-width: 600px;
-    margin: 5rem auto;
-  }
-  #rsvpForm input, #rsvpForm select, #rsvpForm button { padding: 0.8rem 1rem; font-size: 1rem; }
-  #response { font-size: 1rem; }
-
-  /* Footer блок */
-  footer.invite-block {
-    padding: 3rem;
-    min-height: 180px;
-    max-width: 600px;
-    margin: 5rem auto;
-    flex-wrap: nowrap;
-  }
-  footer p { font-size: 1rem; margin-top: 1rem; }
-  footer .decor-left, footer .decor-right { max-width: 150px; }
 }
