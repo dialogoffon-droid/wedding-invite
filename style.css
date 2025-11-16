@@ -97,6 +97,41 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
     object-fit: contain;
     z-index: 2;
 }
+.schedule-block {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+  background: #f8f5f0;
+}
+
+.timeline {
+  position: relative;
+  width: 200px; /* ширина блока под PNG */
+  height: 600px; /* подгоняется под PNG */
+  background: url('image/pynktirserdtse.png') no-repeat center top;
+  background-size: contain;
+}
+
+.event {
+  position: absolute;
+  width: 120px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  color: #6c1d38;
+}
+
+.event.left {
+  left: -150px; /* смещение текста слева */
+}
+
+.event.right {
+  left: 230px; /* смещение текста справа */
+}
 
 
 /* Декорации */
