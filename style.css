@@ -78,66 +78,57 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
 }
 .map-button:hover { background: #c5b294; }
 
-/* ===== 5 блок — RSVP ===== */
-.rsvp-block {
-  text-align: center;
-  padding: 4vw 5vw;
-  background: rgba(255,255,255,0.85);
-  border-radius: 1.5rem;
-  margin: 5vw auto;
-  max-width: 700px;
+/* ===========================================
+   5 блок — RSVP (картинка - форма - картинка)
+   =========================================== */
+.rsvp-block .rsvp-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    flex-wrap: nowrap;
+    position: relative;
 }
 
-.rsvp-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 2rem;
-  gap: 1rem;
+.rsvp-block .decor-left,
+.rsvp-block .decor-right {
+    position: relative;
+    max-width: 120px;
+    pointer-events: none;
 }
 
-.rsvp-header h2 {
-  font-size: 2rem;
-  margin: 0;
+#rsvpForm {
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
+    padding: 2rem;
+    box-sizing: border-box;
+    background: rgba(255,255,255,0.85);
+    border-radius: 1.5rem;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.08);
 }
 
-.rsvp-img {
-  max-width: 100px;
-  height: auto;
+/* Поля формы */
+#rsvpForm input,
+#rsvpForm select,
+#rsvpForm button {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
 }
 
-.rsvp-form select,
-.rsvp-form button {
-  display: block;
-  width: 90%;
-  margin: 1rem auto;
-  padding: 1rem;
-  font-size: 1rem;
-  border-radius: 0.5rem;
+#rsvpForm button {
+    background: #d8c9b0;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
+#rsvpForm button:hover { background: #c5b294; }
 
-.rsvp-form button {
-  background: #d8c9b0;
-  border: none;
-  cursor: pointer;
-}
-
-.rsvp-form button:hover {
-  background: #c5b294;
-}
-
-/* ===== Адаптив ===== */
-@media (max-width: 768px) {
-  .rsvp-header {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .rsvp-img { max-width: 60px; }
-
-  .rsvp-header h2 { font-size: 5vw; }
-  .rsvp-form select, .rsvp-form button { font-size: 4vw; padding: 2vw; }
-}
+#response { margin-top: 1rem; font-weight: bold; font-size: 1rem; }
 
 /* ===========================================
    6 блок — Footer
