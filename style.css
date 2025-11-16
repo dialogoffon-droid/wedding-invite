@@ -71,6 +71,10 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
     aspect-ratio: 1 / 1;  /* идеальный квадрат */
     margin: 0 auto;
 }
+/* Отступы вокруг календарного блока, чтобы он стал таким же, как остальные */
+.calendar-section {
+    padding: 8vw 0;
+}
 
 .calendar-frame {
     position: absolute;
