@@ -119,7 +119,7 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
 #response { margin-top: 1rem; font-weight: bold; font-size: 1rem; }
 
 /* ===========================================
-   6 блок — Footer
+   6 блок — Footer с адаптацией PNG
    =========================================== */
 footer.invite-block {
   position: relative;
@@ -139,7 +139,7 @@ footer.invite-block {
 
 footer p { font-size: 3.5vw; margin-top: 2vw; }
 
-/* PNG декорации */
+/* PNG декорации Footer */
 footer .decor-left,
 footer .decor-right {
   position: absolute;
@@ -152,29 +152,30 @@ footer .decor-left { left: 5%; }
 footer .decor-right { right: 5%; }
 
 /* ===========================================
-   Медиа-запросы для планшетов
+   Мобильная версия Footer
    =========================================== */
 @media (max-width: 768px) {
-  .invite-block, #rsvpForm, footer.invite-block {
-    padding: 6vw; margin: 6vw auto;
+  footer.invite-block {
+    padding: 6vw;
+    margin: 6vw auto;
+    min-height: auto;
   }
-  h1 { font-size: 7vw; }
-  h2 { font-size: 5vw; }
-  p, li, footer p, #response { font-size: 4vw; }
-  .decor-top, .decor-bottom, .decor-left, .decor-right { max-width: 25%; }
-  #rsvpForm input, #rsvpForm select, #rsvpForm button { padding: 2vw; font-size: 3.5vw; }
-}
 
-/* ===========================================
-   Медиа-запросы для ПК
-   =========================================== */
-@media (min-width: 1025px) {
-  /* Общие блоки 1–4 */
-  .invite-block { padding: 3rem; margin: 5rem auto; }
-  h1 { font-size: 2.5rem; }
-  h2 { font-size: 1.75rem; }
-  p, li { font-size: 1rem; }
-  .decor-top, .decor-bottom, .decor-left, .decor-right { max-width: 180px; }
+  footer p {
+    font-size: 4vw;
+    margin-bottom: 2vw;
+  }
+
+  /* PNG под текстом и по центру */
+  footer .decor-left,
+  footer .decor-right {
+    position: relative;     /* убираем абсолютное позиционирование */
+    display: inline-block;  /* PNG рядом друг с другом */
+    max-width: 40%;         /* уменьшаем размер на мобильных */
+    margin: 1vw 2vw 0 2vw; /* отступ сверху и по бокам */
+    transform: none;
+  }
+}
 
   /* RSVP блок */
   #rsvpForm {
@@ -195,4 +196,3 @@ footer .decor-right { right: 5%; }
   }
   footer p { font-size: 1rem; margin-top: 1rem; }
   footer .decor-left, footer .decor-right { max-width: 150px; }
-}
