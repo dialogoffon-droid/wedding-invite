@@ -97,33 +97,49 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
     object-fit: contain;
     z-index: 2;
 }
-.schedule-block {
+/* Блок 5 — рамка */
+.schedule-frame-block {
   position: relative;
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto;
+  background: #fdf6f0; /* светлый фон */
+  border-radius: 20px;
+  padding: 50px 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  box-sizing: border-box;
+}
+
+.schedule-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 50px 0;
-  background: transparent; /* вместо #f8f5f0 */
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .timeline-container {
   position: relative;
+  z-index: 2; /* чтобы события были поверх рамки */
   display: flex;
   justify-content: center;
-  width: auto;
-  background: transparent; /* добавлено */
+  width: 100%;
+  background: transparent;
 }
 
 .timeline-img {
   display: block;
-  max-width: 200px; /* подгоняем ширину PNG */
+  max-width: 200px;
   height: auto;
 }
 
 .event {
   position: absolute;
   width: 120px;
-  background: rgba(255, 255, 255, 0.8); /* чуть прозрачный блок, чтобы текст читаем */
+  background: rgba(255, 255, 255, 0.8);
   padding: 10px;
   border-radius: 10px;
   text-align: center;
