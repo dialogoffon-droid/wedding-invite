@@ -55,6 +55,10 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
   transform: translateY(50px);
   transition: all 0.8s ease;
 }
+.calendar-section {
+    padding: 0;           /* убираем padding invite-block */
+    margin: 5vw auto;     /* центрируем по вертикали */
+}
 
 .invite-block.visible {
   opacity: 1;
@@ -85,33 +89,6 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
     position: absolute;
     top: 50%; left: 50%;
     width: 80%;    /* меньше рамки на 20% */
-    height: 80%;
-    transform: translate(-50%, -50%);
-    object-fit: contain;
-    z-index: 2;
-}
-/* Отступы вокруг календарного блока, чтобы он стал таким же, как остальные */
-.calendar-section {
-    padding: 0;
-    margin: 5vw auto;     /* центрируем по вертикали */
-}
-
-.calendar-frame {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;          /* рамка = ровно размер блока */
-    height: 100%;
-    object-fit: contain;  /* НЕ растягиваем */
-    z-index: 1;
-    pointer-events: none;
-}
-
-.calendar-image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 80%;           /* календарь = 80% рамки */
     height: 80%;
     transform: translate(-50%, -50%);
     object-fit: contain;
