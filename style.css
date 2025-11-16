@@ -152,8 +152,8 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
 }
 
 /* Адаптивное горизонтальное позиционирование через проценты */
-.event.left { left: -25%; }
-.event.right { left: 50%; }
+.event.left { left: 27%; }
+.event.right { left: 54%; }
 
 /* ===== Медиа-запросы для маленьких экранов ===== */
 @media (max-width: 768px) {
