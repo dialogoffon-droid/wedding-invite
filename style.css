@@ -103,14 +103,15 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
   display: flex;
   justify-content: center;
   padding: 50px 0;
-  background: #f8f5f0; /* общий фон страницы */
+  background: transparent; /* вместо #f8f5f0 */
 }
 
 .timeline-container {
   position: relative;
   display: flex;
   justify-content: center;
-  width: auto; /* под PNG */
+  width: auto;
+  background: transparent; /* добавлено */
 }
 
 .timeline-img {
