@@ -97,7 +97,7 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
     object-fit: contain;
     z-index: 2;
 }
-/* Блок 5 — рамка */
+/* ===== Блок 5 — рамка с программой ===== */
 .schedule-frame-block {
   position: relative;
   width: 90%;
@@ -105,7 +105,7 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
   margin: 0 auto;
   background: #fdf6f0; /* светлый фон */
   border-radius: 20px;
-  padding: 50px 20px;
+  padding: 40px 20px; /* немного меньше сверху/снизу для компактности */
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   box-sizing: border-box;
 }
@@ -123,33 +123,70 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
 
 .timeline-container {
   position: relative;
-  z-index: 2; /* чтобы события были поверх рамки */
+  z-index: 2; /* поверх рамки */
   display: flex;
   justify-content: center;
   width: 100%;
-  background: transparent;
+  height: auto;
+  padding: 20px 0;
 }
 
 .timeline-img {
   display: block;
-  max-width: 200px;
+  max-width: 250px; /* увеличено для пропорции с рамкой */
+  width: 30%; /* адаптивно */
   height: auto;
+  margin: 0 auto;
 }
 
 .event {
   position: absolute;
   width: 120px;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.85); /* чуть прозрачный фон */
   padding: 10px;
   border-radius: 10px;
   text-align: center;
   font-family: 'Playfair Display', serif;
   color: #6c1d38;
+  box-sizing: border-box;
 }
 
-.event.left { left: -150px; }
-.event.right { left: 230px; }
+/* Адаптивное горизонтальное позиционирование через проценты */
+.event.left { left: -25%; }
+.event.right { left: 50%; }
 
+/* ===== Медиа-запросы для маленьких экранов ===== */
+@media (max-width: 768px) {
+  .timeline-img {
+    max-width: 180px;
+    width: 40%;
+  }
+
+  .event {
+    width: 90px;
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+  
+  .event.left { left: -15%; }
+  .event.right { left: 35%; }
+}
+
+@media (max-width: 480px) {
+  .timeline-img {
+    max-width: 140px;
+    width: 50%;
+  }
+
+  .event {
+    width: 80px;
+    font-size: 0.75rem;
+    padding: 6px;
+  }
+
+  .event.left { left: -10%; }
+  .event.right { left: 30%; }
+}
 
 /* Декорации */
 .decor-top, .decor-bottom, .decor-left, .decor-right {
