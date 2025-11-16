@@ -30,9 +30,29 @@
     <img src="image/floral-line-bottom.png" class="decor-bottom" alt="">
 </section>
 
-<!-- Блок 2.5 — Календарь -->
-<section class="invite-block animate">
-    <img src="image/january-2026-heart24.png" alt="Календарь январь 2026 с сердечком на 24" style="width: 100%; height: auto; border-radius: 20px;">
+<!-- Блок 2.5 — Календарь с рамкой -->
+<section class="invite-block animate" style="position: relative; padding: 0; overflow: hidden;">
+    <!-- Рамка по контуру блока -->
+    <img src="image/floral-line-top.png" alt="Рамка для календаря" style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
+        z-index: 1;
+    ">
+
+    <!-- Календарь внутри блока -->
+    <img src="image/january-2026-heart24.png" alt="Календарь январь 2026 с сердечком на 24" style="
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        position: relative;
+        z-index: 2;
+        display: block;
+    ">
 </section>
 
 <!-- Блок 3 — Место проведения -->
