@@ -312,9 +312,12 @@ footer.footer-block {
 }
 
 .rsvp-title {
-    font-size: 10vw;
-    margin-bottom: 20px;
+  font-size: 20px; /* было меньше — делаем больше */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
 }
+
 
 .rsvp-label {
     font-size: 4vw;
