@@ -31,7 +31,14 @@ body {
   text-align: center;
   overflow: hidden;
   box-sizing: border-box;
-  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.invite-block.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .decor-top, .decor-bottom, .decor-left, .decor-right {
@@ -65,9 +72,9 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
   color: #3b2c1f;
   text-decoration: none;
   border-radius: 12px;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
-.map-button:hover { background: #c5b294; }
+.map-button:hover { background: #c5b294; transform: scale(1.05); }
 
 #rsvpForm input, #rsvpForm select, #rsvpForm button {
   width: 90%;
@@ -78,27 +85,18 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
   border-radius: 12px;
   border: 1px solid #ccc;
   box-sizing: border-box;
+  transition: all 0.3s ease;
 }
+#rsvpForm input:focus, #rsvpForm select:focus { border-color: #d8c9b0; outline: none; }
 
 #rsvpForm button {
   background: #d8c9b0;
   border: none;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
-#rsvpForm button:hover { background: #c5b294; }
+#rsvpForm button:hover { background: #c5b294; transform: scale(1.05); }
 #response { margin-top: 1rem; font-weight: bold; font-size: 1rem; }
-
-#rsvpForm .decor-left,
-#rsvpForm .decor-right {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  max-width: 120px;
-  pointer-events: none;
-}
-#rsvpForm .decor-left { left: 5%; }
-#rsvpForm .decor-right { right: 5%; }
 
 footer.footer-block {
   display: flex;
@@ -116,21 +114,13 @@ footer.footer-block {
   box-sizing: border-box;
 }
 
-.footer-text {
-  flex-shrink: 0;
-  margin: 0 20px;
-  font-size: 1.25rem;
-}
-
-.footer-left, .footer-right {
-  max-width: 120px;
-}
+.footer-text { flex-shrink: 0; margin: 0 20px; font-size: 1.25rem; }
+.footer-left, .footer-right { max-width: 120px; }
 
 @media (max-width: 768px) {
   h1 { font-size: 7vw; }
   h2 { font-size: 5vw; }
   p, li, #response, .footer-text { font-size: 4vw; }
-  
   #rsvpForm .decor-left, #rsvpForm .decor-right,
   .footer-left, .footer-right {
     max-width: 25%;
@@ -138,11 +128,7 @@ footer.footer-block {
     transform: none;
     margin: 0 5px;
   }
-  
-  footer.footer-block {
-    flex-direction: row;
-    justify-content: center;
-  }
+  footer.footer-block { flex-direction: row; justify-content: center; }
 }
 
 @media (min-width: 1025px) {
