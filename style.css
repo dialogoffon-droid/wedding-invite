@@ -367,3 +367,48 @@ footer.footer-block {
     border-radius: 12px;
     font-size: 4vw;
 }
+/* ===== ПК версия (фикс гигантской анкеты) ===== */
+@media (min-width: 1024px) {
+    .rsvp-title {
+        font-size: 2rem !important;
+        margin-bottom: 20px;
+    }
+
+    .rsvp-label {
+        font-size: 1.1rem !important;
+        margin: 20px 0 10px;
+    }
+
+    .rsvp-form input {
+        font-size: 1.1rem !important;
+        padding: 12px 16px !important;
+    }
+
+    .choice-btn {
+        font-size: 1.1rem !important;
+        padding: 12px 16px !important;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .choice-group {
+        gap: 10px;
+    }
+
+    .rsvp-submit {
+        font-size: 1.2rem !important;
+        max-width: 450px;
+        margin: 20px auto 0;
+        padding: 14px 18px !important;
+    }
+
+    .rsvp-section .invite-block {
+        padding: 30px !important;
+    }
+
+    /* Выравниваем форму по центру */
+    .rsvp-form {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
