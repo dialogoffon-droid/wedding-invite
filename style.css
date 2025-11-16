@@ -23,7 +23,7 @@ body {
 }
 
 /* ===========================================
-   Основные блоки (1–4)
+   Основные блоки 1–4
    =========================================== */
 .invite-block {
   position: relative;
@@ -79,57 +79,56 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
 .map-button:hover { background: #c5b294; }
 
 /* ===========================================
-   5 блок — RSVP
+   5 блок — RSVP (картинка - форма - картинка)
    =========================================== */
-#rsvpForm {
-  position: relative;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 1.5rem;
-  padding: 4vw 5vw;
-  min-height: 250px;
-  margin: 5vw auto;
-  width: 90%;
-  max-width: 700px;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.08);
-  backdrop-filter: blur(5px);
-  text-align: center;
-  overflow: hidden;
-  box-sizing: border-box;
+.rsvp-block .rsvp-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    flex-wrap: nowrap;
+    position: relative;
 }
 
-/* Поля формы и кнопки */
+.rsvp-block .decor-left,
+.rsvp-block .decor-right {
+    position: relative;
+    max-width: 120px;
+    pointer-events: none;
+}
+
+#rsvpForm {
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
+    padding: 2rem;
+    box-sizing: border-box;
+    background: rgba(255,255,255,0.85);
+    border-radius: 1.5rem;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.08);
+}
+
+/* Поля формы */
 #rsvpForm input,
 #rsvpForm select,
 #rsvpForm button {
-  width: 90%;
-  padding: 1rem 1.2rem;
-  margin: 1rem auto;
-  display: block;
-  font-size: 1rem;
-  box-sizing: border-box;
-  border-radius: 0.5rem;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
 }
 
 #rsvpForm button {
-  background: #d8c9b0;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s ease;
+    background: #d8c9b0;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 #rsvpForm button:hover { background: #c5b294; }
-#response { margin-top: 1rem; font-weight: bold; font-size: 1rem; }
 
-/* PNG декорации RSVP */
-#rsvpForm .decor-left,
-#rsvpForm .decor-right {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  max-width: 120px;
-  pointer-events: none;
-}
-#rsvpForm .decor-left { left: 5%; }
-#rsvpForm .decor-right { right: 5%; }
+#response { margin-top: 1rem; font-weight: bold; font-size: 1rem; }
 
 /* ===========================================
    6 блок — Footer
@@ -147,11 +146,10 @@ footer.invite-block {
   backdrop-filter: blur(5px);
   text-align: center;
   overflow: hidden;
-  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: nowrap; /* PNG и текст на одном уровне */
+  flex-wrap: nowrap;
 }
 
 footer p {
@@ -160,7 +158,6 @@ footer p {
   flex-shrink: 0;
 }
 
-/* PNG декорации Footer — ПК */
 footer .decor-left,
 footer .decor-right {
   position: absolute;
@@ -169,124 +166,59 @@ footer .decor-right {
   max-width: 120px;
   pointer-events: none;
 }
-footer .decor-left { left: 5%; }
-footer .decor-right { right: 5%; }
 
 /* ===========================================
-   Медиа-запросы для планшетов и мобильных
+   Медиа-запросы для мобильных
    =========================================== */
 @media (max-width: 768px) {
-  /* Основные блоки и Footer */
   .invite-block, #rsvpForm, footer.invite-block {
     padding: 6vw; 
     margin: 6vw auto;
     min-height: auto;
   }
 
-  /* Текст */
   h1 { font-size: 7vw; }
   h2 { font-size: 5vw; }
   p, li, footer p, #response { font-size: 4vw; }
 
-  /* Декорации */
-  .decor-top, .decor-bottom, .decor-left, .decor-right { max-width: 25%; }
-
-  /* RSVP поля */
-  #rsvpForm input, #rsvpForm select, #rsvpForm button { padding: 2vw; font-size: 3.5vw; }
-
-  /* RSVP PNG под текстом */
-  #rsvpForm .decor-left,
-  #rsvpForm .decor-right {
-    position: relative;
-    display: inline-block;
-    transform: none;
-    max-width: 40%;
-    margin: 1vw 2vw 0 2vw;
+  /* RSVP блок */
+  .rsvp-block .rsvp-content {
+      flex-direction: column;
+      gap: 1.5rem;
+  }
+  .rsvp-block .decor-left,
+  .rsvp-block .decor-right {
+      max-width: 40%;
+  }
+  #rsvpForm {
+      max-width: 90%;
+      padding: 1.5rem;
   }
 
-  /* Footer PNG и текст на одном уровне */
+  /* Footer */
   footer.invite-block {
-    flex-direction: row; /* PNG - текст - PNG */
-    align-items: center;
-    justify-content: center;
-    padding: 4vw 2vw;
+      flex-direction: column;
   }
-
-  footer p {
-    font-size: 4vw;
-    margin: 0 2vw;
-    text-align: center;
-  }
-
+  footer p { font-size: 4vw; margin: 1rem 0; }
   footer .decor-left,
-  footer .decor-right {
-    position: relative; /* inline под текстом */
-    transform: none;
-    display: inline-block;
-    max-width: 20%;
-    margin: 0;
-  }
+  footer .decor-right { max-width: 30%; position: relative; transform: none; }
 }
 
 /* ===========================================
    Медиа-запросы для ПК
    =========================================== */
 @media (min-width: 1025px) {
-  /* Основные блоки 1–4 */
   .invite-block { padding: 3rem; margin: 5rem auto; }
   h1 { font-size: 2.5rem; }
   h2 { font-size: 1.75rem; }
   p, li { font-size: 1rem; }
   .decor-top, .decor-bottom, .decor-left, .decor-right { max-width: 180px; }
 
-  /* RSVP блок */
-  #rsvpForm {
-    padding: 3rem;
-    min-height: 220px;
-    max-width: 600px;
-    margin: 5rem auto;
-  }
+  #rsvpForm { padding: 3rem; min-height: 220px; max-width: 600px; margin: 0; }
   #rsvpForm input, #rsvpForm select, #rsvpForm button { padding: 0.8rem 1rem; font-size: 1rem; }
   #response { font-size: 1rem; }
 
-  /* Footer блок */
-  footer.invite-block {
-    padding: 3rem;
-    min-height: 180px;
-    max-width: 600px;
-    margin: 5rem auto;
-    flex-wrap: nowrap;
-  }
+  footer.invite-block { padding: 3rem; min-height: 180px; max-width: 600px; flex-wrap: nowrap; }
   footer p { font-size: 1rem; margin-top: 1rem; }
   footer .decor-left, footer .decor-right { max-width: 150px; }
-}
-/* ================================
-   Исправление 5-го блока (RSVP)
-   PNG — сверху слева и справа
-   ================================ */
-#rsvpForm .decor-left,
-#rsvpForm .decor-right {
-  position: absolute;
-  top: 0;            /* теперь строго сверху */
-  transform: none;   /* убираем смещение по центру */
-  max-width: 90px;
-  pointer-events: none;
-}
-
-#rsvpForm .decor-left {
-  left: 0;           /* верхний левый угол */
-}
-
-#rsvpForm .decor-right {
-  right: 0;          /* верхний правый угол */
-}
-
-/* ======== Мобильная версия ======== */
-@media (max-width: 768px) {
-
-  #rsvpForm .decor-left,
-  #rsvpForm .decor-right {
-    max-width: 25%;      /* красиво уменьшаем на телефонах */
-    top: -10px;          /* чуть выше текста */
-  }
 }
