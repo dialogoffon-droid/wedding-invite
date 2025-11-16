@@ -195,10 +195,22 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
   pointer-events: none;
   max-width: 20%;
 }
-.decor-top { top: -5%; left: 50%; transform: translateX(-50%); }
+.decor-top {
+    top: -2%;
+    left: 52%;
+    transform: translateX(-50%);
+    }
 .decor-bottom { bottom: -5%; left: 50%; transform: translateX(-50%); }
-.decor-left { left: -5%; top: 50%; transform: translateY(-50%); }
-.decor-right { right: -5%; top: 50%; transform: translateY(-50%); }
+.decor-left {
+    left: -0%;
+    top: 15%;
+    transform: translateY(-50%);
+}
+.decor-right {
+    right: -0%;
+    top: 65%;
+    ansform: translateY(-50%);
+}
 
 /* Кнопки */
 .map-button {
