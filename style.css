@@ -144,14 +144,61 @@ footer p { font-size: 3.5vw; margin-top: 2vw; }
   }
 }
 /* ==============================
-   Footer (6 блок) — корректировка PNG
+   Footer (6 блок) — финальная версия
    ============================== */
-footer .decor-left,
-footer .decor-right {
-  max-width: 120px;        /* уменьшаем размер PNG */
-  top: 50%;                /* центр по вертикали */
-  transform: translateY(-50%);
+footer.invite-block {
+  position: relative;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 1.5rem;
+  padding: 4vw 5vw;       /* внутренние отступы, чтобы блок был пропорционален остальным */
+  min-height: 200px;       /* минимальная высота блока */
+  margin: 5vw auto;
+  width: 90%;
+  max-width: 700px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(5px);
+  text-align: center;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
-footer .decor-left { left: 5%; }   /* отступ слева */
-footer .decor-right { right: 5%; } /* отступ справа */
+/* Текст Footer */
+footer p {
+  font-size: 3.5vw;
+  margin-top: 2vw;
+}
+
+/* Декорации PNG в Footer */
+footer .decor-left,
+footer .decor-right {
+  position: absolute;
+  top: 50%;                   /* центр по вертикали */
+  transform: translateY(-50%);
+  max-width: 120px;            /* уменьшаем размер PNG */
+  pointer-events: none;
+}
+
+footer .decor-left { left: 5%; }
+footer .decor-right { right: 5%; }
+
+/* Медиа-запросы для ПК */
+@media (min-width: 1025px) {
+  footer.invite-block {
+    padding: 3rem;             /* пропорции под десктоп */
+    min-height: 180px;
+    max-width: 600px;           /* чуть уже, чем общие блоки */
+    margin: 5rem auto;
+  }
+
+  footer p { font-size: 1rem; margin-top: 1rem; }
+
+  footer .decor-left,
+  footer .decor-right { max-width: 150px; }
+}
+
+/* Медиа-запросы для планшета */
+@media (max-width: 768px) {
+  footer.invite-block { padding: 6vw; margin: 6vw auto; }
+  footer p { font-size: 4vw; margin-top: 2vw; }
+  footer .decor-left, footer .decor-right { max-width: 25%; }
+}
