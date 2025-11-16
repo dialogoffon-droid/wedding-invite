@@ -65,10 +65,9 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
 =========================== */
 .calendar-block {
     position: relative;
-    width: 320px;      /* фиксированный размер рамки */
-    height: auto;
+    width: 350px;  /* ← увеличил, чтобы не сжимало */
+    height: 420px; /* ← подгоняем под высоту рамки */
     margin: 0 auto;
-    padding: 20px 0;   /* отступы сверху/снизу */
 }
 
 /* Декорации */

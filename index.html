@@ -51,19 +51,24 @@
 <!-- Блок 2.5 — Календарь с рамкой -->
 <section class="invite-block animate">
     <div class="calendar-block">
-        <img src="image/floral-line-top.png" alt="Рамка для календаря" style="
+        <img src="image/floral-line-top.png" alt="Рамка" style="
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
-    height: auto;
-    pointer-events: none;
+    height: 100%;
+    object-fit: contain;
     z-index: 1;
+    pointer-events: none;
 ">
 
-        <img src="image/january-2026-heart24.png"
-     alt="Календарь январь 2026 с сердечком на 24"
-     style="width: 80%; height: auto; border-radius: 20px; position: relative; z-index: 2; display: block; margin: 0 auto;">
+        <img src="image/january-2026-heart24.png" style="
+    position: relative;
+    z-index: 2;
+    width: 80%;
+    height: auto;
+    margin: 25px auto 0 auto;
+    display: block;
+">
 
     </div>
 </section>
