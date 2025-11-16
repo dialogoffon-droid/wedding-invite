@@ -51,12 +51,8 @@
 </section>
 
 <!-- Блок 5 — RSVP -->
-<section class="invite-block rsvp-block">
-    <div class="rsvp-content">
-        <img src="image/smoking.png" class="decor-left" alt="">
-        <h2>RSVP</h2>
-        <img src="image/dress.png" class="decor-right" alt="">
-    </div>
+<section class="invite-block">
+    <h2>RSVP</h2>
     <form id="rsvpForm" class="rsvp-form">
         <input type="text" id="guest_name" name="guest_name" placeholder="Ваше имя" required>
         <input type="text" id="guest_surname" name="guest_surname" placeholder="Ваша фамилия" required>
@@ -74,6 +70,10 @@
         <input type="number" id="guests_count" name="guests_count" placeholder="Количество гостей">
         <button type="submit">Отправить RSVP</button>
         <div id="response"></div>
+
+        <!-- PNG декорации под текст на мобильных -->
+        <img src="image/smoking.png" class="decor-left" alt="">
+        <img src="image/dress.png" class="decor-right" alt="">
     </form>
 </section>
 
