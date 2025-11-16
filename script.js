@@ -27,3 +27,26 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.2 });
 
 blocks.forEach(block => observer.observe(block));
+const choiceButtons = document.querySelectorAll(".choice-btn");
+const comingSelect = document.getElementById("coming");
+const pairBlock = document.getElementById("pair-block");
+
+choiceButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+
+        // Активная кнопка
+        choiceButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const value = btn.dataset.value;
+        comingSelect.value = value;
+
+        // Появление блока про пару
+        if (value === "with") {
+            pairBlock.style.display = "block";
+        } else {
+            pairBlock.style.display = "none";
+            document.getElementById("guests_names").value = "";
+        }
+    });
+});

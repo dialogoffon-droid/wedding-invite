@@ -62,7 +62,6 @@
     <p>Зал торжеств "Ривьера", Москва</p>
     <a href="#" class="map-button">Посмотреть на карте</a>
     <img src="image/corner-left.png" class="decor-left" alt="">
-    <img src="image/corner-right.png" class="decor-right" alt="">
 </section>
 
 <!-- Блок 5 — Программа с рамкой и оптимальными позициями событий -->
@@ -85,30 +84,52 @@
 </section>
 
 <!-- Блок 5 — RSVP -->
-<section class="invite-block animate">
-    <h2>Опрос</h2>
-    <form id="rsvpForm" class="rsvp-form">
-        <input type="text" id="guest_name" name="guest_name" placeholder="Ваше имя" required>
-        <input type="text" id="guest_surname" name="guest_surname" placeholder="Ваша фамилия" required>
-        <select id="coming" name="coming" required>
-            <option value="">Вы придёте?</option>
-            <option value="yes">Да</option>
-            <option value="no">Нет</option>
-        </select>
-        <select id="coming_alone" name="coming_alone">
-            <option value="">Придёте один?</option>
-            <option value="yes">Да</option>
-            <option value="no">Нет</option>
-        </select>
-        <input type="text" id="guests_names" name="guests_names" placeholder="Имя Спутника(если есть)">
-        <input type="number" id="guests_count" name="guests_count" placeholder="Количество гостей">
-        <button type="submit">Отправить</button>
-        <div id="response"></div>
+<section class="invite-block animate rsvp-section">
 
-        <img src="image/smoking.png" class="decor-left" alt="">
-        <img src="image/dress.png" class="decor-right" alt="">
+    <h2 class="rsvp-title">Анкета</h2>
+
+    <form id="rsvpForm" class="rsvp-form">
+
+        <!-- Имя и фамилия -->
+        <label class="rsvp-label">Ваше имя и фамилия</label>
+        <input type="text" id="guest_name" name="guest_name" required>
+
+        <!-- Присутствие -->
+        <label class="rsvp-label">Будете ли присутствовать на нашем празднике?</label>
+
+        <div class="choice-group">
+            <div class="choice-btn" data-value="yes">Обязательно приду</div>
+            <div class="choice-btn" data-value="with">Буду со своей парой</div>
+            <div class="choice-btn" data-value="no">К сожалению, не смогу</div>
+        </div>
+
+        <!-- Скрытый select ради логики -->
+        <select id="coming" name="coming" required style="display:none;">
+            <option value="yes">Обязательно приду</option>
+            <option value="with">Буду со своей парой</option>
+            <option value="no">К сожалению, не смогу</option>
+        </select>
+
+        <!-- Поле для пары -->
+        <div id="pair-block" style="display:none;">
+            <label class="rsvp-label">Если вы придёте со своей парой,<br>напишите имя и фамилию</label>
+            <input type="text" id="guests_names" name="guests_names" placeholder="Имя и фамилия">
+        </div>
+
+        <!-- Скрываем старые элементы, но оставляем (для логики) -->
+        <input type="hidden" id="guest_surname" name="guest_surname">
+        <select id="coming_alone" name="coming_alone" style="display:none;">
+            <option value="yes"></option>
+            <option value="no"></option>
+        </select>
+        <input type="hidden" id="guests_count" name="guests_count" value="1">
+
+        <button type="submit" class="rsvp-submit">Отправить</button>
+        <div id="response"></div>
     </form>
+
 </section>
+
 
 <!-- Блок 6 — Footer -->
 <footer class="invite-block footer-block animate">
