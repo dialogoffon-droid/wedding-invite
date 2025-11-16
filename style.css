@@ -63,11 +63,35 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
 /* ===========================
    Блок календаря
 =========================== */
+/* Блок 2.5 — фиксированная рамка 1024×1024 */
 .calendar-block {
     position: relative;
-    width: 350px;  /* ← увеличил, чтобы не сжимало */
-    height: 420px; /* ← подгоняем под высоту рамки */
-    margin: 0 auto;
+    width: 1024px;
+    height: 1024px;
+    margin: 0 auto;             /* по центру */
+    display: flex;
+    justify-content: center;    /* центрируем календарь */
+    align-items: center;        /* центрируем календарь */
+}
+
+/* Рамка — ровно 1024×1024 */
+.calendar-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1024px;
+    height: 1024px;
+    object-fit: contain;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Календарь — 80% размера блока */
+.calendar-image {
+    width: 80%;     /* = 819px */
+    height: auto;
+    z-index: 2;
+    display: block;
 }
 
 /* Декорации */
