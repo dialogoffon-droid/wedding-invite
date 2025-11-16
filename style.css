@@ -70,30 +70,34 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
 /* Блок 2.5 — базовый размер 1024×1024, но адаптивный */
 .calendar-block {
     position: relative;
-    width: 100%;      /* блок под размер рамки */
-    max-width: 520px; /* ограничение */
-    aspect-ratio: 1/1;
+    width: 100%;          /* блок под ширину invite-block или max-width */
+    max-width: 480px;     /* ограничение по размеру */
+    aspect-ratio: 1 / 1;  /* квадрат */
     margin: 0 auto;
 }
 
 .calendar-frame {
     position: absolute;
-    top: 0; left: 0;
-    width: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;          /* рамка = размер блока */
     height: 100%;
     object-fit: contain;
     z-index: 1;
+    pointer-events: none;
 }
 
 .calendar-image {
     position: absolute;
-    top: 50%; left: 50%;
-    width: 80%;    /* меньше рамки на 20% */
+    top: 50%;
+    left: 50%;
+    width: 80%;           /* календарь меньше рамки на 20% */
     height: 80%;
     transform: translate(-50%, -50%);
     object-fit: contain;
     z-index: 2;
 }
+
 
 /* Декорации */
 .decor-top, .decor-bottom, .decor-left, .decor-right {
