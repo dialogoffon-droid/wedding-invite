@@ -22,11 +22,10 @@
     <img src="image/heart-center.png" class="decor-top" alt="">
 </section>
 
-<!-- Блок 2 — Дорогие друзья -->
-<section class="invite-block animate">
-    <h2>Дорогие друзья!</h2>
-    <p>Мы рады пригласить вас разделить с нами этот особенный день, когда наши сердца соединяются в одну историю.</p>
-    <img src="image/floral-line-bottom.png" alt="Рамка для календаря" style="
+<!-- Блок 2 — Дорогие друзья с рамкой и текстом поверх -->
+<section class="invite-block animate" style="position: relative; overflow: hidden; padding: 5vw;">
+    <!-- Рамка -->
+    <img src="image/floral-line-bottom.png" alt="Рамка" style="
         position: absolute;
         top: 0;
         left: 0;
@@ -36,7 +35,8 @@
         pointer-events: none;
         z-index: 1;
     ">
-  <!-- Текст поверх рамки -->
+
+    <!-- Текст поверх рамки -->
     <div style="
         position: relative;
         z-index: 2;
