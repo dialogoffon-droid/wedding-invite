@@ -1,7 +1,7 @@
 /* ===========================================
    Шрифты под мультяшный стиль
    =========================================== */
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 body {
   margin: 0;
@@ -11,12 +11,12 @@ body {
   overflow-x: hidden;
 }
 
+/* Заголовки */
 h1, h2 {
-  font-family: "Luckiest Guy", cursive;
-  font-weight: 700;
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
   margin-bottom: 1rem;
 }
-
 h1 { font-size: 6vw; color: #4c3b2f; }
 h2 { font-size: 4.5vw; color: #5a4639; }
 
