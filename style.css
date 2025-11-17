@@ -424,7 +424,7 @@ footer.footer-block {
     }
 @media (max-width: 480px) {
   .rsvp-title {
-    font-size: 10vw; /* чуть больше для телефонов */
+    font-size: 15vw; /* чуть больше для телефонов */
     margin-bottom: 65px;
   }
 }
