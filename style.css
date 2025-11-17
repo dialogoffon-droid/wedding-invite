@@ -510,3 +510,34 @@ footer.footer-block {
     }
 }
 
+/* Декорации RSVP блока */
+.rsvp-section {
+    position: relative; /* чтобы декорации позиционировались относительно блока */
+}
+
+.rsvp-decor-left,
+.rsvp-decor-right {
+    position: absolute;
+    top: 10px;             /* отступ сверху */
+    width: 80px;           /* максимальная ширина, сохраняем пропорции */
+    height: auto;
+    z-index: 2;
+    pointer-events: none;  /* чтобы не мешали кликам по форме */
+}
+
+.rsvp-decor-left {
+    left: 10px;            /* отступ слева */
+}
+
+.rsvp-decor-right {
+    right: 10px;           /* отступ справа */
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 480px) {
+    .rsvp-decor-left,
+    .rsvp-decor-right {
+        width: 60px;
+        top: 8px;
+    }
+}
