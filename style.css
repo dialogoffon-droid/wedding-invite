@@ -41,7 +41,7 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
 /* Основные блоки */
 .invite-block {
   position: relative;
-  background: linear-gradient(145deg, #ffffff, #fdf6f0);
+  background: #fdf6f0;
   border-radius: 20px;
   padding: 7vw;
   margin: 5vw auto;
