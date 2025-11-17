@@ -427,9 +427,9 @@ h2.rsvp-title {
   .timeline-img {
     width: 60%;
     display: block;
-    margin: 0 auto; /* центрируем по горизонтали */
+    margin: 0 0 0 20%; /* центрируем по горизонтали */
     position: relative; /* чтобы margin сработал */
-    left: -10;           /* убираем смещения */
+    left: 0;           /* убираем смещения */
     transform: none;   /* убираем любые трансформации */
   }
 
