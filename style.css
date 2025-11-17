@@ -211,7 +211,7 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
 }
 .decor-right {
     right: -0%;
-    top: 55%;
+    top: 75%;
     transform: translateY(-50%);
 }
 
