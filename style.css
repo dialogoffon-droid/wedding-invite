@@ -424,10 +424,10 @@ footer.footer-block {
     }
 @media (max-width: 480px) {
   .rsvp-title {
-    font-size: 8vw; /* чуть больше для телефонов */
+    font-size: 10vw; /* чуть больше для телефонов */
+    margin-bottom: 65px;
   }
 }
-
 /* ===== МОБИЛЬНАЯ АДАПТАЦИЯ БЛОКА ПРОГРАММЫ ===== */
 @media (max-width: 480px) {
   /* Центрируем PNG с сердечками */
