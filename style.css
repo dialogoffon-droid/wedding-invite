@@ -321,10 +321,36 @@ footer.footer-block {
   .decor-top, .decor-bottom, .decor-left, .decor-right { max-width: 180px; }
 }
 .rsvp-section {
+    position: relative; /* обязательно, чтобы внутренние абсолютные элементы привязывались к секции */
     padding-top: 40px;
     padding-bottom: 40px;
 }
 
+.rsvp-corner-left,
+.rsvp-corner-right {
+    position: absolute;
+    top: 0;
+    width: 80px; /* подберите размер под ваш дизайн */
+    height: auto;
+    pointer-events: none; /* чтобы не мешали кликам */
+    z-index: 3; /* чтобы были поверх блока */
+}
+
+.rsvp-corner-left {
+    left: 0;
+}
+
+.rsvp-corner-right {
+    right: 0;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 480px) {
+    .rsvp-corner-left,
+    .rsvp-corner-right {
+        width: 25vw; /* пропорционально ширине экрана */
+    }
+}
 /* Единый заголовок для анкеты на всех устройствах */
 .rsvp-title {
   font-size: 6vw;       /* адаптивный размер относительно ширины экрана */
