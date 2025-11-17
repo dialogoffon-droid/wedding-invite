@@ -425,7 +425,7 @@ h2.rsvp-title {
 @media (max-width: 480px) {
   /* Центрируем PNG с сердечками */
   .timeline-img {
-    width: 60%;
+    width: 80%;
     display: block;
     margin: 0 0 0 20%; /* центрируем по горизонтали */
     position: relative; /* чтобы margin сработал */
