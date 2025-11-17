@@ -326,13 +326,13 @@ footer.footer-block {
 }
 
 .rsvp-title {
-  font-size: 20px; /* было меньше — делаем больше */
+  font-size: 6vw; /* было меньше — делаем больше */
   font-weight: 700;
   text-align: center;
   margin-bottom: 20px;
 }
 h2.rsvp-title {
-    font-size: 20px !important;
+    font-size: 6vw !important;
 }
 
 
@@ -390,7 +390,7 @@ h2.rsvp-title {
 /* ===== ПК версия (фикс гигантской анкеты) ===== */
 @media (min-width: 1024px) {
     .rsvp-title {
-        font-size: 20px !important;
+        font-size: 6vw !important;
         margin-bottom: 20px;
     }
 
@@ -489,7 +489,7 @@ h2.rsvp-title {
 }
 /* ①: Сделать заголовок анкеты одинаковым на всех устройствах (как на ПК) */
 h2.rsvp-title {
-  font-size: 20px !important; /* тот же размер, что и в desktop @media */
+  font-size: 6vw !important; /* тот же размер, что и в desktop @media */
   line-height: 1.05;
   margin-bottom: 20px;
 }
