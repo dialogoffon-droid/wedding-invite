@@ -423,20 +423,19 @@ h2.rsvp-title {
 }
 /* ===== МОБИЛЬНАЯ АДАПТАЦИЯ БЛОКА ПРОГРАММЫ ===== */
 @media (max-width: 480px) {
-  /* Центрируем PNG с сердечками */
-  .timeline-img {
-    width: 100%;
-    display: block;
-    margin: 0 0 0 20%; /* центрируем по горизонтали */
-    position: relative; /* чтобы margin сработал */
-    left: 0;           /* убираем смещения */
-    transform: none;   /* убираем любые трансформации */
+  .timeline-container {
+    max-width: 100%; /* контейнер может быть шире */
+    padding: 25px 0;
   }
 
-  /* Сохраняем линии и карточки событий */
-  .timeline-container {
-    max-width: 220px;
-    padding: 25px 0;
+  .timeline-img {
+    width: 120%;     /* увеличиваем картинку больше контейнера */
+    max-width: none;
+    display: block;
+    margin: 0;        /* убираем автопозиционирование */
+    position: relative;
+    left: 20%;       /* сдвигаем влево */
+    transform: none;
   }
 
   .event {
@@ -445,8 +444,6 @@ h2.rsvp-title {
     padding: 7px;
   }
 
-  /* Левое/правое смещение событий относительно новой позиции линии */
   .event.left  { left: -5%; }
   .event.right { left: 58%; }
 }
-
