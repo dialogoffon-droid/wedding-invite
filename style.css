@@ -487,3 +487,9 @@ h2.rsvp-title {
         line-height: 1.3;
     }
 }
+/* ①: Сделать заголовок анкеты одинаковым на всех устройствах (как на ПК) */
+h2.rsvp-title {
+  font-size: 20px !important; /* тот же размер, что и в desktop @media */
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
