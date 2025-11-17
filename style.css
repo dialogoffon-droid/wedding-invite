@@ -449,4 +449,30 @@ h2.rsvp-title {
   .event.left  { left: -5%; }
   .event.right { left: 58%; }
 }
+/* ===== ИДЕАЛЬНАЯ МОБИЛЬНАЯ ВЕРСИЯ FOOTER ===== */
+@media (max-width: 480px) {
+    footer.footer-block {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
 
+        padding: 6vw 4vw;
+        min-height: 140px;
+
+        gap: 4vw; /* расстояние между иконками и текстом */
+    }
+
+    .footer-left,
+    .footer-right {
+        max-width: 22vw; /* одинаковые, пропорциональные */
+        height: auto;
+    }
+
+    .footer-text {
+        font-size: 4vw;
+        max-width: 45vw;
+        text-align: center;
+        line-height: 1.3;
+    }
+}
