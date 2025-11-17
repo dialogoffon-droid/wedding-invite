@@ -153,8 +153,8 @@ p, li { font-size: 3.5vw; line-height: 1.6; }
 }
 
 /* ПК — как было изначально */
-.event.left  { left: -15%; }
-.event.right { left: 65%; }
+.event.left  { left: -11%; }
+.event.right { left: 56%; }
 
 /* ===== Планшеты ===== */
 @media (max-width: 768px) {
