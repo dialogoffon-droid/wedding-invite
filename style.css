@@ -325,16 +325,14 @@ footer.footer-block {
     padding-bottom: 40px;
 }
 
+/* Единый заголовок для анкеты на всех устройствах */
 .rsvp-title {
-  font-size: 6vw; /* было меньше — делаем больше */
+  font-size: 6vw;       /* адаптивный размер относительно ширины экрана */
+  line-height: 1.05;    /* высота строки, чтобы заголовок был компактным */
   font-weight: 700;
   text-align: center;
   margin-bottom: 20px;
 }
-h2.rsvp-title {
-    font-size: 6vw !important;
-}
-
 
 .rsvp-label {
     font-size: 4vw;
@@ -387,13 +385,6 @@ h2.rsvp-title {
     border-radius: 12px;
     font-size: 4vw;
 }
-/* ===== ПК версия (фикс гигантской анкеты) ===== */
-@media (min-width: 1024px) {
-    .rsvp-title {
-        font-size: 6vw !important;
-        margin-bottom: 20px;
-    }
-
     .rsvp-label {
         font-size: 1.1rem !important;
         margin: 20px 0 10px;
@@ -431,7 +422,12 @@ h2.rsvp-title {
         max-width: 500px;
         margin: 0 auto;
     }
+@media (max-width: 480px) {
+  .rsvp-title {
+    font-size: 8vw; /* чуть больше для телефонов */
+  }
 }
+
 /* ===== МОБИЛЬНАЯ АДАПТАЦИЯ БЛОКА ПРОГРАММЫ ===== */
 @media (max-width: 480px) {
   /* Центрируем PNG с сердечками */
@@ -487,9 +483,4 @@ h2.rsvp-title {
         line-height: 1.3;
     }
 }
-/* ①: Сделать заголовок анкеты одинаковым на всех устройствах (как на ПК) */
-h2.rsvp-title {
-  font-size: 6vw !important; /* тот же размер, что и в desktop @media */
-  line-height: 1.05;
-  margin-bottom: 20px;
-}
+
