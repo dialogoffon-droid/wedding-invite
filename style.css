@@ -285,6 +285,17 @@ footer.footer-block {
 
 .footer-text { flex-shrink: 0; margin: 0 20px; font-size: 1.25rem; }
 .footer-left, .footer-right { max-width: 120px; }
+.footer-left {
+    position: relative;
+    left: 0;   /* ←→ */
+    top: 0;    /* ↑↓ */
+}
+
+.footer-right {
+    position: relative;
+    left: 0;   /* ←→ */
+    top: 0;    /* ↑↓ */
+}
 
 /* ===========================
    Медиа-запросы
