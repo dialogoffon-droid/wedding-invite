@@ -274,7 +274,7 @@ footer.footer-block {
   flex-wrap: nowrap;
   background: linear-gradient(145deg, #ffffff, #fdf6f0);
   border-radius: 20px;
-  padding: 4vw 5vw;
+  padding: 4vw 15vw;
   min-height: 180px;
   margin: 5vw auto;
   width: 90%;
