@@ -287,13 +287,13 @@ footer.footer-block {
 .footer-left, .footer-right { max-width: 120px; }
 .footer-left {
     position: relative;
-    left: 0;   /* ←→ */
+    left: 10%;   /* ←→ */
     top: 0;    /* ↑↓ */
 }
 
 .footer-right {
     position: relative;
-    left: 0;   /* ←→ */
+    left: -10%;   /* ←→ */
     top: 0;    /* ↑↓ */
 }
 
