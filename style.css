@@ -625,3 +625,22 @@ footer.footer-block {
         line-height: 1.35;
     }
 }
+/* Заголовок для блока "Дорогие гости" */
+.invite-title {
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
+    color: #6c1d38;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-size: 2.2rem; /* ПК */
+}
+
+/* Планшеты */
+@media (max-width: 768px) {
+    .invite-title { font-size: 6vw; }
+}
+
+/* Телефоны */
+@media (max-width: 480px) {
+    .invite-title { font-size: 8vw; }
+}
