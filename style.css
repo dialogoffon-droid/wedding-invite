@@ -605,7 +605,7 @@ footer.footer-block {
     }
 
     .custom-text p {
-        font-size: 3.4vw;     /* адаптив */
+        font-size: 2.6 vw;     /* адаптив */
     }
 }
 
@@ -621,7 +621,7 @@ footer.footer-block {
     }
 
     .custom-text p {
-        font-size: 4.2vw;     /* идеальный размер для мобилок */
+        font-size: 2.2vw;     /* идеальный размер для мобилок */
         line-height: 1.35;
     }
 }
