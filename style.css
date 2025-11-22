@@ -597,11 +597,11 @@ footer.footer-block {
 @media (max-width: 768px) {
     .custom-section { min-height: 360px; }
     .custom-text h2 { font-size: 1.6rem; }
-    .custom-text p  { font-size: 0.7rem; }
+    .custom-text p  { font-size: 0.4rem; }
 }
 
 @media (max-width: 480px) {
     .custom-section { min-height: 300px; }
     .custom-text h2 { font-size: 1.4rem; }
-    .custom-text p  { font-size: 0.6rem; }
+    .custom-text p  { font-size: 0.2rem; }
 }
