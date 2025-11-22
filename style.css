@@ -541,19 +541,18 @@ footer.footer-block {
         top: 8px;
     }
 }
-/* ===== Новый блок — рамка на весь блок, текст по центру ===== */
+/* ===== Универсальный блок с рамкой ===== */
 .custom-section {
     position: relative;
     width: 90%;
-    max-width: 700px;       /* как в основном дизайне */
+    max-width: 700px;
     margin: 5vw auto;
     border-radius: 20px;
     overflow: hidden;
-    box-sizing: border-box;
     background: #fdf6f0;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     text-align: center;
-    min-height: 480px;      /* чтобы блок был заметным и рамка растягивалась */
+    min-height: 420px;
 }
 
 .custom-frame {
@@ -562,19 +561,19 @@ footer.footer-block {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;       /* растягиваем рамку на весь блок */
+    object-fit: cover;
     z-index: 1;
     pointer-events: none;
 }
 
+/* Текст внутри рамки */
 .custom-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    max-width: 80%;          /* ограничение по ширине, чтобы текст был аккуратный */
-    font-family: 'Playfair Display', serif;
+    max-width: 80%;
     color: #3b3b3b;
     text-align: center;
 }
@@ -582,26 +581,47 @@ footer.footer-block {
 .custom-text h2 {
     font-family: 'Great Vibes', cursive;
     font-weight: 400;
-    font-size: 2rem;
-    color: #6c1d38;
+    font-size: 2.2rem;
     margin-bottom: 0.5rem;
+    color: #6c1d38;
 }
 
 .custom-text p {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin: 0.25rem 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    line-height: 1.45;
 }
 
-/* ===== Мобильная адаптация ===== */
+
+/* ===== Планшеты ===== */
 @media (max-width: 768px) {
-    .custom-section { min-height: 360px; }
-    .custom-text h2 { font-size: 1.6rem; }
-    .custom-text p  { font-size: 0.4rem; }
+
+    .custom-section {
+        min-height: 360px;
+    }
+
+    .custom-text h2 {
+        font-size: 6vw;       /* адаптив */
+    }
+
+    .custom-text p {
+        font-size: 3.4vw;     /* адаптив */
+    }
 }
 
+/* ===== Телефоны ===== */
 @media (max-width: 480px) {
-    .custom-section { min-height: 300px; }
-    .custom-text h2 { font-size: 1.4rem; }
-    .custom-text p  { font-size: 0.2rem; }
+
+    .custom-section {
+        min-height: 300px;
+    }
+
+    .custom-text h2 {
+        font-size: 8vw;       /* красиво читабельно */
+    }
+
+    .custom-text p {
+        font-size: 4.2vw;     /* идеальный размер для мобилок */
+        line-height: 1.35;
+    }
 }
